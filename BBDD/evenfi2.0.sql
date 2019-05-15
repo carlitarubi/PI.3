@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-05-2019 a las 13:03:53
+-- Tiempo de generación: 15-05-2019 a las 11:31:14
 -- Versión del servidor: 10.1.35-MariaDB
 -- Versión de PHP: 7.2.9
 
@@ -73,7 +73,6 @@ CREATE TABLE `plan` (
   `nombre` varchar(50) NOT NULL,
   `estilo` varchar(50) NOT NULL,
   `detalles` varchar(300) NOT NULL,
-  `comentarios` varchar(600) NOT NULL,
   `n_compra` int(50) NOT NULL,
   `localizacion` varchar(50) NOT NULL,
   `precio` int(11) NOT NULL,
