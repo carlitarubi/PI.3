@@ -16,6 +16,21 @@
 CREATE DATABASE IF NOT EXISTS `evenfi` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `evenfi`;
 
+-- Volcando estructura para tabla evenfi.audit_per
+CREATE TABLE IF NOT EXISTS `audit_per` (
+  `id` int(255) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `tlf` int(255) NOT NULL,
+  `fecha_mod` datetime NOT NULL,
+  `usuario` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Volcando datos para la tabla evenfi.audit_per: ~2 rows (aproximadamente)
+/*!40000 ALTER TABLE `audit_per` DISABLE KEYS */;
+/*!40000 ALTER TABLE `audit_per` ENABLE KEYS */;
+
 -- Volcando estructura para tabla evenfi.comentario
 CREATE TABLE IF NOT EXISTS `comentario` (
   `id` int(255) NOT NULL AUTO_INCREMENT,
@@ -102,11 +117,23 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `tipo_ticket` varchar(255) NOT NULL,
   `estado` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- Volcando datos para la tabla evenfi.usuario: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+
+-- Volcando estructura para disparador evenfi.usuario_before_delete
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DELIMITER //
+CREATE TRIGGER `usuario_before_delete` BEFORE DELETE ON `usuario` FOR EACH ROW BEGIN
+
+INSERT INTO audit_per(audit_per.id,audit_per.nombre,audit_per.email,audit_per.tlf,audit_per.fecha_mod,audit_per.usuario)
+VALUES (OLD.id, OLD.nombre, OLD.correo, OLD.telf, NOW(), CURRENT_USER());
+
+END//
+DELIMITER ;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
