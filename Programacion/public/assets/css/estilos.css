@@ -118,16 +118,15 @@ i{
 }
 
 .movaUL{
+    text-decoration: none;
+    list-style-type: none;
+    margin-left: 1em;
+}
+
+.displaynone{
     display: none;
 }
 
-.mova:hover .movaUL{
-    margin-left: 1em;
-    display: block;
-    transition: 0.6s;
-    text-decoration: none;
-    list-style-type: none;
-}
 
 .imagenRedonda{
     margin-left: 1em;
@@ -135,7 +134,7 @@ i{
     width: 3em;
     height: 3em;
     border-radius: 50px;
-    border: 3px solid rgb(46, 46, 46);
+    border: 3px solid rgb(255, 255, 255);
     cursor: pointer;
 }
 
@@ -198,3 +197,9 @@ i{
     border-radius: 50px;
     background-color: rgb(255, 7, 255);
 }
+
+
+  .sidebar-btn + label, .cajainicio1 {
+    transition: left 0.1s;
+  }
+  
