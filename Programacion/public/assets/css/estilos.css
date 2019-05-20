@@ -1,0 +1,200 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  color: #fff;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 2.5em;
+}
+
+.sidebar-btn {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label[for="sidebar-btn"] {
+  position: fixed;
+  left: 15px;
+  top: 15px;
+  z-index: 2;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect style='fill:rgb(255,255,255)' width='15' height='3'/><rect style='fill:rgb(255,255,255)' y='8' width='20' height='3'/><rect style='fill:rgb(255,255,255)' y='16' width='25' height='3'/></svg>");
+  background-size: contain;
+}
+
+.sidebar-btn + label, .content {
+  transition: left 0.1s;
+}
+
+.sidebar-btn:checked + label {
+  left: 245px;
+}
+
+.sidebar-btn:checked ~ .content {
+  left: 230px;
+}
+
+.sidebar {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background: rgba(161,110,255,1);
+  background: -moz-linear-gradient(top, rgba(161,110,255,1) 13%, rgba(133,53,255,1) 60%, rgba(129,45,255,1) 67%, rgba(109,5,255,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(13%, rgba(161,110,255,1)), color-stop(60%, rgba(133,53,255,1)), color-stop(67%, rgba(129,45,255,1)), color-stop(100%, rgba(109,5,255,1)));
+  background: -webkit-linear-gradient(top, rgba(161,110,255,1) 13%, rgba(133,53,255,1) 60%, rgba(129,45,255,1) 67%, rgba(109,5,255,1) 100%);
+  background: -o-linear-gradient(top, rgba(161,110,255,1) 13%, rgba(133,53,255,1) 60%, rgba(129,45,255,1) 67%, rgba(109,5,255,1) 100%);
+  background: -ms-linear-gradient(top, rgba(161,110,255,1) 13%, rgba(133,53,255,1) 60%, rgba(129,45,255,1) 67%, rgba(109,5,255,1) 100%);
+  background: linear-gradient(to bottom, rgba(161,110,255,1) 13%, rgba(133,53,255,1) 60%, rgba(129,45,255,1) 67%, rgba(109,5,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a16eff', endColorstr='#6d05ff', GradientType=0 );
+}
+
+.sidebar li {
+  padding: 1em;
+  color: rgb(235, 235, 235);
+  width: 300px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 50ms;
+  -o-transition-duration: 50ms;
+  -webkit-transition-duration: 50ms;
+  transition-duration: 50ms;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  cursor: pointer;
+}
+.sidebar li:hover {
+  color: white;
+}
+
+.content {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: #dcdde1;
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+  padding: 4em;
+  color: #2d3436;
+}
+
+.navi{
+    padding: 1em;
+}
+
+
+i{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.movaUL{
+    display: none;
+}
+
+.mova:hover .movaUL{
+    margin-left: 1em;
+    display: block;
+    transition: 0.6s;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.imagenRedonda{
+    margin-left: 1em;
+    margin-bottom: 1em;
+    width: 3em;
+    height: 3em;
+    border-radius: 50px;
+    border: 3px solid rgb(46, 46, 46);
+    cursor: pointer;
+}
+
+
+.perfil{
+    width: 100%;
+}
+.inline{
+    display: inline-block;
+}
+
+.centrars{
+    vertical-align: 1.4em;
+    font-size: 1.4em;
+    margin-left: 0.3em;
+    cursor: pointer;
+}
+
+.cajastickets, .cajasbusqueda, .cajasplanes{
+    position: relative;
+}
+.cajainicio1{
+    width: 17em;
+    height: 10em;
+    background-color: white;
+    position: relative;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 1em;
+}
+
+.cajainicio2{
+    width: 36.3em;
+    height: 8.5em;
+    background-color: white;
+    position: relative;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 1em;
+}
+
+.cajainicio3{
+    width: 17em;
+    height: 23em;
+    background-color: white;
+    position: relative;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 1em;
+}
+
+.añadirconciertos{
+    width: 13em;
+    height: 3em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+    font-size: 1em;
+    border-radius: 50px;
+    background-color: rgb(255, 7, 255);
+}
