@@ -27,10 +27,7 @@ CREATE TABLE IF NOT EXISTS `audit_per` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla evenfi.audit_per: ~2 rows (aproximadamente)
-/*!40000 ALTER TABLE `audit_per` DISABLE KEYS */;
-/*!40000 ALTER TABLE `audit_per` ENABLE KEYS */;
-
+-- La exportación de datos fue deseleccionada.
 -- Volcando estructura para tabla evenfi.comentario
 CREATE TABLE IF NOT EXISTS `comentario` (
   `id` int(255) NOT NULL AUTO_INCREMENT,
@@ -47,10 +44,7 @@ CREATE TABLE IF NOT EXISTS `comentario` (
   CONSTRAINT `FK_comentario_usuario` FOREIGN KEY (`id_user`) REFERENCES `usuario` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla evenfi.comentario: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `comentario` DISABLE KEYS */;
-/*!40000 ALTER TABLE `comentario` ENABLE KEYS */;
-
+-- La exportación de datos fue deseleccionada.
 -- Volcando estructura para tabla evenfi.compra
 CREATE TABLE IF NOT EXISTS `compra` (
   `id` int(255) NOT NULL AUTO_INCREMENT,
@@ -63,10 +57,7 @@ CREATE TABLE IF NOT EXISTS `compra` (
   CONSTRAINT `FK_compra_usuario` FOREIGN KEY (`user`) REFERENCES `usuario` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla evenfi.compra: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `compra` DISABLE KEYS */;
-/*!40000 ALTER TABLE `compra` ENABLE KEYS */;
-
+-- La exportación de datos fue deseleccionada.
 -- Volcando estructura para tabla evenfi.linea
 CREATE TABLE IF NOT EXISTS `linea` (
   `id` int(255) NOT NULL AUTO_INCREMENT,
@@ -80,10 +71,7 @@ CREATE TABLE IF NOT EXISTS `linea` (
   CONSTRAINT `FK_linea_plan` FOREIGN KEY (`plan`) REFERENCES `plan` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla evenfi.linea: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `linea` DISABLE KEYS */;
-/*!40000 ALTER TABLE `linea` ENABLE KEYS */;
-
+-- La exportación de datos fue deseleccionada.
 -- Volcando estructura para tabla evenfi.plan
 CREATE TABLE IF NOT EXISTS `plan` (
   `id` int(255) NOT NULL AUTO_INCREMENT,
@@ -99,10 +87,7 @@ CREATE TABLE IF NOT EXISTS `plan` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla evenfi.plan: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `plan` DISABLE KEYS */;
-/*!40000 ALTER TABLE `plan` ENABLE KEYS */;
-
+-- La exportación de datos fue deseleccionada.
 -- Volcando estructura para tabla evenfi.usuario
 CREATE TABLE IF NOT EXISTS `usuario` (
   `id` int(255) NOT NULL AUTO_INCREMENT,
@@ -117,12 +102,9 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `tipo_ticket` varchar(255) NOT NULL,
   `estado` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla evenfi.usuario: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
-
+-- La exportación de datos fue deseleccionada.
 -- Volcando estructura para disparador evenfi.usuario_before_delete
 SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
