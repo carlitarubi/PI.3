@@ -15,7 +15,7 @@
     </ul>
   </li>
   <li onclick="abrireventos(this)" class="mova">
-   <i class="fas fa-thumbtack"></i> &nbsp Eventos
+   <i class="fas fa-thumbtack"></i> &nbsp Eventos <span id="flechita1"><i class="fas fa-angle-right"></i></span>
     <ul id="eventos" class="movaUL displaynone">
         <li>Quedadas</li>
         <li>Festivales</li>
@@ -23,7 +23,7 @@
   </li>
   <h5 class="navi">Admin</h5>
   <li onclick="abriradministrar(this)" class="mova">
-   <i class="fas fa-cog"></i> &nbsp Administrar
+   <i class="fas fa-cog"></i> &nbsp Administrar <span id="flechita2"><i class="fas fa-angle-right"></i></span>
     <ul id="administrar" class="movaUL displaynone">
         <li>Conciertos</li>
         <li>Eventos</li>
