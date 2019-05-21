@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+html, body{
+    width: 100%;
+    height: 100%;
+    padding:0;
+    margin:0px;
+}
+
+slider{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #1f1f1f;
+    overflow: hidden;
+    position: absolute;
+}
+
+slider > * {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #1f1f1f;
+    animation: slide 12s infinite;
+    overflow: hidden;
+}
+
+slide:nth-child(1){
+    left:0;
+    animation-delay: -7s;
+    background: url(../imagenes/medusa.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide:nth-child(2){
+    animation-delay: -4s;
+    background: url(../imagenes/resu.png);
+    background-size: cover;
+    background-position: center;
+}
+slide:nth-child(3){
+    animation-delay: -1s;
+    background: url(../imagenes/viñarock.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide:nth-child(4){
+    left:0;
+    animation-delay: 2s;
+    background: url(../imagenes/gamergy.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+slide p{
+    font-family: Comfortaa;
+    font-size: 70px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 340px;
+    color: White;
+}
+
+@keyframes slide{
+    0% { left: 100%; width: 100%;}
+    5% { left: 0%;}
+    25% { left: 0%;}
+    30% { left: -100%; width: 100%;}
+    30.0001% {left: 100%; width: 0%;}
+    100% { left: 100%; width: 0%;}
+}
+
+#conciertos{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #c7ecee;
+    font-size: 1em;
+    top: 100%;
+}
+
+#contacto{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #f1f2f6;
+    font-size: 3em;
+    top: 200%;
+}
+
+#faq{
+    width: 100%;
+    position: absolute;
+    background-color: #c7ecee;
+    font-size: 3em;
+    top: 300%;
+}
+
+#menu{
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    z-index: 99;
+    text-align: center;
+    transition: 0.5s;
+    /*background-color: white;*/
+}
+.bg-inverse{
+    transition: 0.5s;
+    background-color: white;
+}
+li{
+    list-style-type: none;
+    display: inline;
+    color: white;
+    font-family: Comfortaa;
+    cursor: pointer;
+}
+ul{
+
+}
+
+.logonav{
+    position: relative;
+    width: 8%;
+    height: auto;
+    margin-right: 30%;
+}
+.izqmg{
+    position: relative;
+    left: -20%;
+    margin-right: 2%;
+    vertical-align: 7px;
+    transition: 0.5s;
+}
+
+
+
+
+
+#ins{
+    position: relative;
+    right: 4%;
+    margin-left: 10%;
+    font-weight: bold;
+    vertical-align: 7px;
+    transition: 0.5s;
+}
+
+#ins2{
+    position: relative;
+    right: 2%;
+    background-color: #1f1f1f;
+    padding: 10px;
+    border-radius: 50px;
+    padding-left: 17px;
+    padding-right: 17px;
+    transition: 0.3s;
+    font-weight: bold;
+    vertical-align: 7px;
+}
+#ins2:hover{
+    background-color: #333333;
+    transition: 0.3s;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.colorf1{
+    color: #1f1f1f;
+    transition-duration: 0.5s;
+}
+
+.vertalig{
+    vertical-align: 23px;
+    transition-duration: 0.5s;
+}
+.vertalig2{
+    vertical-align: 16px;
+    transition-duration: 0.5s;
+}
+#ins1{
+    transition-duration: 0.5s;
+}
+
+.logonegro{
+    display: none;
+    z-index: 100;
+    transition: 0.5s;
+}
+
+.logonav2{
+    position: fixed;
+    left: 7.7%;
+    top: 0.7%;
+    width: 8%;
+    height: auto;
+    z-index: 100;
+    transition: 0.5s;
+}
+
+.concierto{
+    width: 100px;
+    height:400px;
+    margin-top: 50px;
+       -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: url(../imagenes/conciertouwu.jpg);
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+    display: inline-block;
+    margin-left: 150px;
+}
+
+.conciertoa{
+
+    background-color: #f6f6f6;
+    border-top: 1px solid #dce8f1;
+    padding: 25px;
+    text-align: center;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+    margin-top: 20px;
+  
+}
+
+
+
+.concierto1{  width: 75px;
+    height:400px;
+    margin-top: 50px;
+       -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: url(../imagenes/conciertowo.jpg);
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;  
+   float: right ;
+   margin-right: 150px;
+    display: inline-block;
+
+}
+    
+.imgconc{
+    margin-top: 20px;
+    border-radius: 150px;
+}
+
