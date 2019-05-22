@@ -26,7 +26,7 @@
    <i class="fas fa-cog"></i> &nbsp Administrar <span id="flechita2"><i class="fas fa-angle-right"></i></span>
     <ul id="administrar" class="movaUL displaynone">
     <li>
-        <a href="conciertos.php">Conciertos</a>
+        <a class="nave textoblanco" href="conciertos.php">Conciertos</a>
      </li>
         <li>Eventos</li>
     </ul>
