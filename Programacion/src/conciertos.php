@@ -12,22 +12,23 @@
 <body>
     <?php include 'navs/nav.php'; ?>
 
-    
-    
+
+
     <div class="content">
 
     <h2>Inicio</h2>
+    <br>
 
-    <div class="añadirconciertos"><strong>+ Añadir conciertos</strong></div>
+    <div class="añadirconciertos pointer"><strong>+ Añadir conciertos</strong></div>
 
 
 
-    
+
         <div id="planes">
                 <div class="cajasplanes">
                     <div class="cajainicio3">
                     <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles"> 
+                    <div class="planescard planescarddetalles">
                         <div class="detallestxt"><strong>Concierto 1</strong></div>
                         <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
                         <div class="detallestxt">XX COMENTARIOS</div>
@@ -39,7 +40,7 @@
                 </div>
                 <div class="cajainicio3">
                 <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles"> 
+                    <div class="planescard planescarddetalles">
                         <div class="detallestxt"><strong>Concierto 2</strong></div>
                         <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
                         <div class="detallestxt">XX COMENTARIOS</div>
@@ -52,7 +53,7 @@
                 </div>
                 <div class="cajainicio3">
                 <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles"> 
+                    <div class="planescard planescarddetalles">
                         <div class="detallestxt"><strong>Concierto 3</strong></div>
                         <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
                         <div class="detallestxt">XX COMENTARIOS</div>
@@ -65,7 +66,7 @@
                 </div>
                 <div class="cajainicio3">
                 <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles"> 
+                    <div class="planescard planescarddetalles">
                         <div class="detallestxt"><strong>Concierto 4</strong></div>
                         <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
                         <div class="detallestxt">XX COMENTARIOS</div>
@@ -73,14 +74,14 @@
                     <div class="planescard planescardcomprar">
                         <div class="botonescard botonmediano morado textoblanco">borrar</div>
                         <div class="botonescard botonmediano verde textoblanco">editar</div>
-                    </div>    
+                    </div>
                 </div>
             </div>
-    
+
             <div class="cajasplanes">
                 <div class="cajainicio3">
                 <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles"> 
+                    <div class="planescard planescarddetalles">
                         <div class="detallestxt"><strong>Concierto 5</strong></div>
                         <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
                         <div class="detallestxt">XX COMENTARIOS</div>
@@ -92,7 +93,7 @@
                 </div>
                 <div class="cajainicio3">
                 <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles"> 
+                    <div class="planescard planescarddetalles">
                         <div class="detallestxt"><strong>Concierto 6</strong></div>
                         <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
                         <div class="detallestxt">XX COMENTARIOS</div>
@@ -104,7 +105,7 @@
                 </div>
                 <div class="cajainicio3">
                 <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles"> 
+                    <div class="planescard planescarddetalles">
                         <div class="detallestxt"><strong>Concierto 7</strong></div>
                         <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
                         <div class="detallestxt">XX COMENTARIOS</div>
@@ -116,7 +117,7 @@
                 </div>
                 <div class="cajainicio3">
                 <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles"> 
+                    <div class="planescard planescarddetalles">
                         <div class="detallestxt"><strong>Concierto 8</strong></div>
                         <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
                         <div class="detallestxt">XX COMENTARIOS</div>
