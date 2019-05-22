@@ -20,3 +20,23 @@ function abriradministrar(bal){
 
 
 document.getElementById("flechita").innerHTML = '<i class="fas fa-angle-right"></i>'
+
+function abrirRegistroUsuarios(value) {
+document.getElementById("fondoRegistroUsuarios").classList.remove("displayNone");
+document.getElementById("XregistroUsuarios").classList.remove("displayNone");
+}
+
+function cerrarRegistroUsuarios(value) {
+document.getElementById("fondoRegistroUsuarios").classList.add("displayNone");
+document.getElementById("XregistroUsuarios").classList.add("displayNone");
+}
+
+function abrirModificarUsuarios(value) {
+document.getElementById("fondoModificarUsuarios").classList.remove("displayNone");
+document.getElementById("modificarUsuarios").classList.remove("displayNone");
+}
+
+function cerrarModificarUsuarios(value) {
+document.getElementById("fondoModificarUsuarios").classList.add("displayNone");
+document.getElementById("modificarUsuarios").classList.add("displayNone");
+}

@@ -20,7 +20,7 @@
     <br>
         <div id="usucaja">
           <div>
-            <div class="botoncrear rosa pointer"><strong>+ Crear Usuario</strong></div>
+            <div class="botoncrear rosa pointer" onclick="abrirRegistroUsuarios(this)"><strong>+ Crear Usuario</strong></div>
           </div>
           <table>
             <tr>
@@ -38,7 +38,7 @@
              <td class="listaUsu">paco@sanz.com</td>
              <td class="listaUsu">Penépolis</td>
              <td class="listaUsu">20-06-1985</td>
-             <td class="listaUsu"><i class="fas fa-edit pointer opacity"></i> &nbsp<i class="fas fa-trash pointer opacity"></i></td>
+             <td class="listaUsu"><i onclick="abrirModificarUsuarios(this)" class="fas fa-edit pointer opacity"></i> &nbsp<i class="fas fa-trash pointer opacity"></i></td>
             </tr>
 
             <tr>
@@ -60,39 +60,78 @@
 
           </table>
         </div>
-        <div class="fondocrearUsu">
-          <div class="crearUsu">
 
-            <form class="" action="index.html" method="post">
+      <!--Registro de creaccion de usuario-->
+        <div id="fondoRegistroUsuarios" class="fondocrearUsu displayNone">
+          <div id="XregistroUsuarios" class="crearUsu displayNone">
+            <p class="tag">Crear Usuario</p>
+            <p  onclick="cerrarRegistroUsuarios(this)" class="Xcerrar pointer">X</p>
 
-              <div class="formUsu">
+            <form class="" action="usuarios.php" method="post">
+
+              <div class="primerform formUsu">
                 <label for="usuario"></label>
-                <span class="formLabel">Usuario</span>
-                <input type="text" name="usuario" value="">
+                <span>Usuario:</span>
+                <input class="inputusu" type="text" name="usuario" value="">
               </div>
 
               <div class="formUsu">
                 <label for="telf"></label>
-                <span class="formLabel">Teléfono</span>
-                <input type="number" name="telf" value="">
+                <span>Teléfono:</span>
+                <input class="inputusu" type="number" name="telf" value="">
               </div>
 
               <div class="formUsu">
                 <label for="email"></label>
-                <span class="formLabel">Email</span>
-                <input type="text" name="email" value="">
+                <span>Email:</span>
+                <input class="inputusu" type="text" name="email" value="">
               </div>
 
               <div class="formUsu">
                 <label for="localizacion"></label>
-                <span class="formLabel">Localización</span>
-                <input type="text" name="localizacion" value="">
+                <span>Localización:</span>
+                <input class="inputusu" type="text" name="localizacion" value="">
               </div>
-
+              <input class="boton rosa pointer" type="submit" name="" value="Enviar">
             </form>
           </div>
         </div>
 
+        <!-- Registro de modificación de usuario -->
+        <div id="fondoModificarUsuarios" class="fondocrearUsu displayNone">
+          <div id="modificarUsuarios" class="crearUsu displayNone">
+              <p class="tag">Modificar Usuario</p>
+            <p  onclick="cerrarModificarUsuarios(this)" class="Xcerrar pointer">X</p>
+
+            <form class="" action="usuarios.php" method="post">
+
+              <div class="primerform formUsu">
+                <label for="usuarioMod"></label>
+                <span>Usuario:</span>
+                <input class="inputusu" type="text" name="usuarioMod" value="">
+              </div>
+
+              <div class="formUsu">
+                <label for="telfMod"></label>
+                <span>Teléfono:</span>
+                <input class="inputusu" type="number" name="telfMod" value="">
+              </div>
+
+              <div class="formUsu">
+                <label for="emailMod"></label>
+                <span>Email:</span>
+                <input class="inputusu" type="text" name="emailMod" value="">
+              </div>
+
+              <div class="formUsu">
+                <label for="localizacionMod"></label>
+                <span>Localización:</span>
+                <input class="inputusu" type="text" name="localizacionMod" value="">
+              </div>
+              <input class="boton rosa pointer" type="submit" name="" value="Enviar">
+            </form>
+          </div>
+        </div>
 
     </div>
 
