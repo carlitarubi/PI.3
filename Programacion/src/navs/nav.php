@@ -1,3 +1,4 @@
+
 <ul class="sidebar">
   <h1 class="navi"> <img class="redimensionar" src="logoblanco2.png" alt=""> </h1>
 
