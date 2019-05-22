@@ -17,29 +17,128 @@
 
     <h2>Metal</h2>
 
-        <div id="planes">
-            <div class="cajasplanes">
-                <div class="cajainicio3"></div>
-                <div class="cajainicio3"></div>
-                <div class="cajainicio3"></div>
-                <div class="cajainicio3"></div>
-            </div>
+    <div id="planes">
+                <div class="cajasplanes">
+                    <div class="cajainicio3">
+                    <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
+                    <div class="planescard planescarddetalles"> 
+                        <div class="detallestxt"><strong>Concierto METAL 1</strong></div>
+                        <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
+                        <div class="detallestxt">XX COMENTARIOS</div>
+                    </div>
+                    <div class="planescard planescardcomprar">
+                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
+                        <div class="botonescard botonmediano verde textoblanco">Más detalles</div>
+                    </div>
+                </div>
+                <div class="cajainicio3">
+                <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
+                    <div class="planescard planescarddetalles"> 
+                        <div class="detallestxt"><strong>Concierto METAL 2</strong></div>
+                        <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
+                        <div class="detallestxt">XX COMENTARIOS</div>
+                    </div>
+                    <div class="planescard planescardcomprar">
+                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
+                        <div class="botonescard botonmediano verde textoblanco">Más detalles</div>
+                    </div>
 
-            <div class="cajasplanes">
-                <div class="cajainicio3"></div>
-                <div class="cajainicio3"></div>
-                <div class="cajainicio3"></div>
-                <div class="cajainicio3"></div>
-            </div>
+                </div>
+                <div class="cajainicio3">
+                <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
+                    <div class="planescard planescarddetalles"> 
+                        <div class="detallestxt"><strong>Concierto METAL 3</strong></div>
+                        <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
+                        <div class="detallestxt">XX COMENTARIOS</div>
+                    </div>
+                    <div class="planescard planescardcomprar">
+                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
+                        <div class="botonescard botonmediano verde textoblanco">Más detalles</div>
+                    </div>
 
+                </div>
+                <div class="cajainicio3">
+                <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
+                    <div class="planescard planescarddetalles"> 
+                        <div class="detallestxt"><strong>Concierto METAL 4</strong></div>
+                        <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
+                        <div class="detallestxt">XX COMENTARIOS</div>
+                    </div>
+                    <div class="planescard planescardcomprar">
+                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
+                        <div class="botonescard botonmediano verde textoblanco">Más detalles</div>
+                    </div>
+                </div>
+            </div>
+    
             <div class="cajasplanes">
-                <div class="cajainicio3"></div>
-                <div class="cajainicio3"></div>
-                <div class="cajainicio3"></div>
-                <div class="cajainicio3"></div>
+                <div class="cajainicio3">
+                <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
+                    <div class="planescard planescarddetalles"> 
+                        <div class="detallestxt"><strong>Concierto METAL 5</strong></div>
+                        <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
+                        <div class="detallestxt">XX COMENTARIOS</div>
+                    </div>
+                    <div class="planescard planescardcomprar">
+                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
+                        <div class="botonescard botonmediano verde textoblanco">Más detalles</div>
+                    </div>
+                </div>
+                <div class="cajainicio3">
+                <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
+                    <div class="planescard planescarddetalles"> 
+                        <div class="detallestxt"><strong>Concierto METAL 6</strong></div>
+                        <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
+                        <div class="detallestxt">XX COMENTARIOS</div>
+                    </div>
+                    <div class="planescard planescardcomprar">
+                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
+                        <div class="botonescard botonmediano verde textoblanco">Más detalles</div>
+                    </div>
+                </div>
+                <div class="cajainicio3">
+                <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
+                    <div class="planescard planescarddetalles"> 
+                        <div class="detallestxt"><strong>Concierto METAL 7</strong></div>
+                        <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
+                        <div class="detallestxt">XX COMENTARIOS</div>
+                    </div>
+                    <div class="planescard planescardcomprar">
+                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
+                        <div class="botonescard botonmediano verde textoblanco">Más detalles</div>
+                    </div>
+                </div>
+                <div class="cajainicio3">
+                <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
+                    <div class="planescard planescarddetalles"> 
+                        <div class="detallestxt"><strong>Concierto METAL 8</strong></div>
+                        <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
+                        <div class="detallestxt">XX COMENTARIOS</div>
+                    </div>
+                    <div class="planescard planescardcomprar">
+                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
+                        <div class="botonescard botonmediano verde textoblanco">Más detalles</div>
+                    </div>
+                </div>
             </div>
         </div>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     </div>
