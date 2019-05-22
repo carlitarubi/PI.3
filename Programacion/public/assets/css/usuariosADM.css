@@ -89,7 +89,71 @@
   justify-content: center;
 }
 
+.displayNone{
+  display: none;
+}
 .formUsu{
   font-family: 'Ubuntu', sans-serif;
   font-size: 2em;
+  margin-bottom: 2em;
+}
+.inputusu{
+  width: 20em;
+  height: 1.5em;
+  float: right;
+  margin-left: 2em;
+  font-size: 15px;
+  margin-top: 6px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #f9375e;
+  transition: 0.1s;
+}
+
+.inputusu:hover{
+  border-bottom: solid;
+  border-color: #f9375e;
+  transition: 0.1s;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.Xcerrar{
+  right: 0.8em;
+  position: absolute;
+  top: 0.8em;
+  color: red;
+  font-weight: bold;
+  font-size: 1.4em;
+  transition: 0.3s;
+  opacity: 0.8;
+}
+
+.Xcerrar:hover{
+  font-size: 1.6em;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.boton{
+  position: absolute;
+  bottom: 2em;
+  right: 1em;
+  font-size: 1.4em;
+  height: 2em;
+  width: 6em;
+  border-radius: 10px;
+  border-style: none;
+}
+
+.tag{
+  position: absolute;
+  top: 1.5em;
+  left: 1em;
+  font-size: 1em;
+  font-weight: bold;
 }
