@@ -2,5 +2,5 @@
 
       
 <footer class="footer">
-  No está nada mal <br>
+  UN copyright por la cara
 </footer>

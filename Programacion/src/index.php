@@ -17,35 +17,168 @@
 
     <h2>Inicio</h2>
 
-    <div class="añadirconciertos"><strong>+ Añadir conciertos</strong></div>
+   <!-- AÑADIR CONCIERTOS
+       <div class="añadirconciertos"><strong>+ Añadir conciertos</strong></div>
+        -->
 
 
 
         <div class="cajastickets">
-            <div class="cajainicio1">fgfg</div>
-            <div class="cajainicio1">ssss</div>
-            <div class="cajainicio1">sss</div>
-            <div class="cajainicio1">ssss</div>
+            <div class="cajainicio1">
+                <div class="cajaglobal">
+                    <div class="conciertosini textocajaini">
+                        Conciertos <br>
+                        <div class="ccantidad"><strong>256</strong></div>
+                    </div>
+                    <div class="conciertosini cajaicono"><i class="fas fa-music"></i></div>
+                </div>
+            </div>
+            <div class="cajainicio1">
+            <div class="cajaglobal">
+                    <div class="conciertosini textocajaini">
+                        Eventos <br>
+                        <div class="ccantidad"><strong>136</strong></div>
+                    </div>
+                    <div class="conciertosini cajaicono"><i class="fas fa-thumbtack"></i></div>
+            </div>
+            </div>
+            <div class="cajainicio1 verde">
+            <div class="cajaglobal">
+                    <div class="conciertosini textocajaini textoblanco">
+                        Tickets <br>
+                        <div class="ccantidad textoblanco"><strong>17</strong></div>
+                    </div>
+                    <div class="conciertosini cajaicono blanco"><i class="fas fa-ticket-alt textoverde"></i></div>
+            </div>
+            </div>
+            <div class="cajainicio1 morado">
+            <div class="cajaglobal">
+                    <div class="conciertosini textocajaini textoblanco">
+                        Cuenta <br>
+                        <div class="ccantidad textoblanco"><strong>Fiestero</strong></div>
+                    </div>
+                    <div class="conciertosini cajaicono blanco"><i class="fas fa-hand-peace textomorado"></i></div>
+            </div>
+            </div>
         </div>
 
         <div class="cajasbusqueda">
-            <div class="cajainicio2">dddd</div>
-            <div class="cajainicio2">ddd</div>
+            <div class="cajainicio2">
+                <div class="cajaglobal">
+                    <div class="caja textocajalarga">
+                        <h3>Buscar por Concierto</h3><br>
+                        <h4>Busca entre los mejores conciertos de España!</h4>
+                    </div>
+                    <div class="caja botonlargo morado centrar">
+                        <span class="textoblanco">Vamos Ciudadanos!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cajainicio2">
+                <div class="cajaglobal">
+                    <div class="caja textocajalarga">
+                        <h3>Buscar por Concierto</h3><br>
+                        <h4>Busca entre los mejores conciertos de España!</h4>
+                    </div>
+                    <div class="caja botonlargo morado centrar">
+                        <span class="textoblanco">Vamos Ciudadanos!</span>
+                    </div>
+                </div>
         </div>
 
         <div id="planes">
             <div class="cajasplanes">
-                <div class="cajainicio3"></div>
-                <div class="cajainicio3"></div>
-                <div class="cajainicio3"></div>
-                <div class="cajainicio3"></div>
+                <div class="cajainicio3">
+                    <div class="planescard planescardfoto"> <img class="imagencard" src="concert.jpg" alt=""> </div>
+                    <div class="planescard planescarddetalles"> 
+                        <div class="detallestxt"><strong>Concierto 1</strong></div>
+                        <div class="detallestxt">Aqui va una lista de detalles que describen el concierto en un breve texto.</div>
+                    </div>
+                    <div class="planescard planescardcomprar">
+                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
+                        <div class="botonescard botonmediano azul textoblanco">Más detalles</div>
+                    </div>
+                </div>
+                <div class="cajainicio3">
+                    <div class="planescard planescardfoto"> <img class="imagencard" src="concert.jpg" alt=""> </div>
+                    <div class="planescard planescarddetalles"> 
+                        <div class="detallestxt"><strong>Concierto 1</strong></div>
+                        <div class="detallestxt">Aqui va una lista de detalles que describen el concierto en un breve texto.</div>
+                    </div>
+                    <div class="planescard planescardcomprar">
+                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
+                        <div class="botonescard botonmediano azul textoblanco">Más detalles</div>
+                    </div>
+                </div>
+                <div class="cajainicio3">
+                    <div class="planescard planescardfoto"> <img class="imagencard" src="concert.jpg" alt=""> </div>
+                    <div class="planescard planescarddetalles"> 
+                        <div class="detallestxt"><strong>Concierto 1</strong></div>
+                        <div class="detallestxt">Aqui va una lista de detalles que describen el concierto en un breve texto.</div>
+                    </div>
+                    <div class="planescard planescardcomprar">
+                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
+                        <div class="botonescard botonmediano azul textoblanco">Más detalles</div>
+                    </div>
+                </div>
+                <div class="cajainicio3">
+                    <div class="planescard planescardfoto"> <img class="imagencard" src="concert.jpg" alt=""> </div>
+                    <div class="planescard planescarddetalles"> 
+                        <div class="detallestxt"><strong>Concierto 1</strong></div>
+                        <div class="detallestxt">Aqui va una lista de detalles que describen el concierto en un breve texto.</div>
+                    </div>
+                    <div class="planescard planescardcomprar">
+                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
+                        <div class="botonescard botonmediano azul textoblanco">Más detalles</div>
+                    </div>
+                </div>
             </div>
 
             <div class="cajasplanes">
-                <div class="cajainicio3"></div>
-                <div class="cajainicio3"></div>
-                <div class="cajainicio3"></div>
-                <div class="cajainicio3"></div>
+            <div class="cajainicio3">
+                    <div class="planescard planescardfoto"> <img class="imagencard" src="concert.jpg" alt=""> </div>
+                    <div class="planescard planescarddetalles"> 
+                        <div class="detallestxt"><strong>Concierto 1</strong></div>
+                        <div class="detallestxt">Aqui va una lista de detalles que describen el concierto en un breve texto.</div>
+                    </div>
+                    <div class="planescard planescardcomprar">
+                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
+                        <div class="botonescard botonmediano azul textoblanco">Más detalles</div>
+                    </div>
+                </div>
+                <div class="cajainicio3">
+                    <div class="planescard planescardfoto"> <img class="imagencard" src="concert.jpg" alt=""> </div>
+                    <div class="planescard planescarddetalles"> 
+                        <div class="detallestxt"><strong>Concierto 1</strong></div>
+                        <div class="detallestxt">Aqui va una lista de detalles que describen el concierto en un breve texto.</div>
+                    </div>
+                    <div class="planescard planescardcomprar">
+                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
+                        <div class="botonescard botonmediano azul textoblanco">Más detalles</div>
+                    </div>
+                </div>
+                <div class="cajainicio3">
+                    <div class="planescard planescardfoto"> <img class="imagencard" src="concert.jpg" alt=""> </div>
+                    <div class="planescard planescarddetalles"> 
+                        <div class="detallestxt"><strong>Concierto 1</strong></div>
+                        <div class="detallestxt">Aqui va una lista de detalles que describen el concierto en un breve texto.</div>
+                    </div>
+                    <div class="planescard planescardcomprar">
+                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
+                        <div class="botonescard botonmediano azul textoblanco">Más detalles</div>
+                    </div>
+                </div>
+                <div class="cajainicio3">
+                    <div class="planescard planescardfoto"> <img class="imagencard" src="concert.jpg" alt=""> </div>
+                    <div class="planescard planescarddetalles"> 
+                        <div class="detallestxt"><strong>Concierto 1</strong></div>
+                        <div class="detallestxt">Aqui va una lista de detalles que describen el concierto en un breve texto.</div>
+                    </div>
+                    <div class="planescard planescardcomprar">
+                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
+                        <div class="botonescard botonmediano azul textoblanco">Más detalles</div>
+                    </div>
+                </div>
             </div>
         </div>
 
