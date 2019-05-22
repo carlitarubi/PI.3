@@ -202,4 +202,7 @@ i{
   .sidebar-btn + label, .cajainicio1 {
     transition: left 0.1s;
   }
-  
+
+  .nave{
+    text-decoration: none;
+  }

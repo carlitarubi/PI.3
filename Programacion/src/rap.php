@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../public/assets/css/estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <title>Document</title>
+    <title>EVENFI</title>
 </head>
 <body>
     <?php include 'navs/nav.php'; ?>
@@ -15,23 +15,7 @@
 
     <div class="content">
 
-    <h2>Inicio</h2>
-
-    <div class="añadirconciertos"><strong>+ Añadir conciertos</strong></div>
-
-
-
-        <div class="cajastickets">
-            <div class="cajainicio1">fgfg</div>
-            <div class="cajainicio1">ssss</div>
-            <div class="cajainicio1">sss</div>
-            <div class="cajainicio1">ssss</div>
-        </div>
-
-        <div class="cajasbusqueda">
-            <div class="cajainicio2">dddd</div>
-            <div class="cajainicio2">ddd</div>
-        </div>
+    <h2>Rap</h2>
 
         <div id="planes">
             <div class="cajasplanes">
@@ -47,7 +31,16 @@
                 <div class="cajainicio3"></div>
                 <div class="cajainicio3"></div>
             </div>
+
+            <div class="cajasplanes">
+                <div class="cajainicio3"></div>
+                <div class="cajainicio3"></div>
+                <div class="cajainicio3"></div>
+                <div class="cajainicio3"></div>
+            </div>
         </div>
+        </div>
+
 
     </div>
 

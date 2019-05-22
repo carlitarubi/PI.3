@@ -1,0 +1,95 @@
+#usucaja{
+  width: 75em;
+  height: auto;
+  background-color: white;
+  position: relative;
+  display: inline-block;
+  margin: 1em;
+  border-radius: 5px;
+}
+
+#thUsu{
+  padding-left: 3.5em;
+}
+
+.datosUsu{
+
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.2em;
+  padding-right: 6em;
+  padding-top: 0.2em;
+  padding-bottom: 2em;
+}
+
+.listaUsu{
+  font-family: 'Ubuntu', sans-serif;
+  padding-bottom: 2.2em;
+}
+.separadorls{
+  float: right;
+  margin-right: 9em;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.botoncrear{
+  font-family: 'Ubuntu', sans-serif;
+  padding: 0.8em;
+  width: 8em;
+  margin: 1em;
+  border-radius: 50px;
+}
+
+.rosa{
+  background-color: #f9375e;
+  color: white;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.rosa:hover{
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.opacity{
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.opacity:hover{
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.fondocrearUsu{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.crearUsu{
+  top: 5em;
+  position: absolute;
+  background-color: white;
+  width: 40em;
+  height: 40em;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px 0px rgba(42,62,80,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formUsu{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2em;
+}
