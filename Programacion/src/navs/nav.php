@@ -18,8 +18,8 @@
   <li onclick="abrireventos(this)" class="mova">
    <i class="fas fa-thumbtack"></i> &nbsp Eventos <span id="flechita1"><i class="fas fa-angle-right"></i></span>
     <ul id="eventos" class="movaUL displaynone">
-        <li>Quedadas</li>
-        <li>Festivales</li>
+        <a class="nave" href="quedadas.php"><li>Quedadas</li></a>
+        <a class="nave" href="festivales.php"><li>Festivales</li></a>
     </ul>
   </li>
   <h5 class="navi">Admin</h5>
