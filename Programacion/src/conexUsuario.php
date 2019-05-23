@@ -13,6 +13,5 @@ public function listarUsuarios(){
     $resultado=$this->conexion->query("SELECT nombre, telf, correo, localizacion, fecha_creacion FROM usuario");
     return $resultado;
   }
-
 }
  ?>
