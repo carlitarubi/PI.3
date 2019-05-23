@@ -1,3 +1,10 @@
+<?php
+require 'conexion.php';
+require 'conexUsuario.php';
+$j=new Usuario();
+$j->conectar();
+$lista=$j->listarUsuarios();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,7 +18,7 @@
     <title>Administración - usuarios</title>
 </head>
 <body>
-    <?php include 'navs/nav.php'; ?>
+    <?php include 'navs/nav.php';?>
 
 
 
@@ -33,32 +40,20 @@
               <th class="datosUsu">Administrar</th>
             </tr>
 
-            <tr>
-             <td class="listaUsu separadorls">Paco</td>
-             <td class="listaUsu">666666666</td>
-             <td class="listaUsu">paco@sanz.com</td>
-             <td class="listaUsu">Penépolis</td>
-             <td class="listaUsu">20-06-1985</td>
-             <td class="listaUsu"><i onclick="abrirModificarUsuarios(this)" class="fas fa-edit pointer opacity"></i> &nbsp<i class="fas fa-trash pointer opacity"></i></td>
-            </tr>
-
-            <tr>
-             <td class="listaUsu separadorls">Paco</td>
-             <td class="listaUsu">666666666</td>
-             <td class="listaUsu">paco@sanz.com</td>
-             <td class="listaUsu">Penépolis</td>
-             <td class="listaUsu">20-06-1985</td>
-             <td class="listaUsu"></td>
-            </tr>
-            <tr>
-             <td class="listaUsu separadorls">Paco</td>
-             <td class="listaUsu">666666666</td>
-             <td class="listaUsu">paco@sanz.com</td>
-             <td class="listaUsu">Penépolis</td>
-             <td class="listaUsu">20-06-1985</td>
-             <td class="listaUsu"></td>
-            </tr>
-
+            <?php
+              foreach ($lista as $listar) {
+                echo "</tr>";
+                echo "<td id=separadorls class=listaUsu separadorls>".$listar['nombre']."</td>";
+                echo "<td class=listaUsu>".$listar['telf']."</td>";
+                echo "<td id=emilio class=listaUsu>".$listar['correo']."</td>";
+                echo "<td id=locali class=listaUsu class=gris>".$listar['localizacion']."</td>";
+                echo "<td id=fecha class=listaUsu>".$listar['fecha_creacion']."</td>";
+                ?>
+                <td class="listaUsu"><i onclick="abrirModificarUsuarios(this)" class="fas fa-edit pointer opacity"></i> &nbsp<i class="fas fa-trash pointer opacity"></i></td>
+                <?php
+                echo "</tr>";
+              }
+              ?>
           </table>
         </div>
 
