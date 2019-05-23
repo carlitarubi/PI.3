@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../public/assets/css/estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <title>Conciertos</title>
+    <title>Eventos</title>
 </head>
 <body>
     <?php include 'navs/nav.php'; ?>
@@ -16,10 +16,10 @@
 
     <div class="content">
 
-    <h2>Conciertos</h2>
+    <h2>Eventos</h2>
     <br>
 
-    <div class="añadirconciertos pointer"><strong>+ Añadir conciertos</strong></div>
+    <div class="añadirconciertos pointer"><strong>+ Añadir Eventos</strong></div>
 
 
 

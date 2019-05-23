@@ -29,7 +29,7 @@
     <li>
         <a class="nave textoblanco" href="conciertos.php">Conciertos</a>
      </li>
-        <li>Eventos</li>
+        <a class="nave textoblanco" href="eventos.php"><li>Eventos</li></a>
     </ul>
   </li>
   <a class="nave" href="usuarios.php"><li><i class="fas fa-user-friends"></i> &nbsp Usuarios</li></a>
