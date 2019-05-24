@@ -1,0 +1,176 @@
+#usucaja{
+  width: 75em;
+  height: auto;
+  background-color: white;
+  position: relative;
+  display: inline-block;
+  margin: 1em;
+  border-radius: 5px;
+}
+
+#thUsu{
+  padding-left: 3.5em;
+}
+
+.datosUsu{
+
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.2em;
+  padding-right: 6em;
+  padding-top: 0.2em;
+  padding-bottom: 2em;
+}
+
+.listaUsu{
+  font-family: 'Ubuntu', sans-serif;
+  padding-bottom: 2.2em;
+}
+#separadorls{
+  float: left;
+  margin-left: 5em;
+  text-align: justify;
+}
+
+#locali{
+padding-left: 1.5em;
+}
+
+#emilio{
+  float: left;
+  margin-left: -2em;
+}
+
+#fecha{
+  float: left;
+  margin-left: -2em;
+}
+
+
+
+.pointer{
+  cursor: pointer;
+}
+
+.botoncrear{
+  font-family: 'Ubuntu', sans-serif;
+  padding: 0.8em;
+  width: 8em;
+  margin: 1em;
+  border-radius: 50px;
+}
+
+.rosa{
+  background-color: #f9375e;
+  color: white;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.rosa:hover{
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.opacity{
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.opacity:hover{
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.fondocrearUsu{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.crearUsu{
+  top: 5em;
+  position: absolute;
+  background-color: white;
+  width: 40em;
+  height: 40em;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px 0px rgba(42,62,80,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.displayNone{
+  display: none;
+}
+.formUsu{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2em;
+  margin-bottom: 2em;
+}
+.inputusu{
+  width: 20em;
+  height: 1.5em;
+  float: right;
+  margin-left: 2em;
+  font-size: 15px;
+  margin-top: 6px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #f9375e;
+  transition: 0.1s;
+}
+
+.inputusu:hover{
+  border-bottom: solid;
+  border-color: #f9375e;
+  transition: 0.1s;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.Xcerrar{
+  right: 0.8em;
+  position: absolute;
+  top: 0.8em;
+  color: red;
+  font-weight: bold;
+  font-size: 1.4em;
+  transition: 0.3s;
+  opacity: 0.8;
+}
+
+.Xcerrar:hover{
+  font-size: 1.6em;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.boton{
+  position: absolute;
+  bottom: 2em;
+  right: 1em;
+  font-size: 1.4em;
+  height: 2em;
+  width: 6em;
+  border-radius: 10px;
+  border-style: none;
+}
+
+.tag{
+  position: absolute;
+  top: 1.5em;
+  left: 1em;
+  font-size: 1em;
+  font-weight: bold;
+}
