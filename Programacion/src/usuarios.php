@@ -1,3 +1,14 @@
+<?php
+require 'conexion.php';
+require 'conexUsuario.php';
+$j=new Usuario();
+$con = $j->conectar();
+if (!empty($_POST)) {
+  $registro = $j->crearUsuario($con, $_POST);
+}else{
+
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,7 +22,7 @@
     <title>Administración - usuarios</title>
 </head>
 <body>
-    <?php include 'navs/nav.php'; ?>
+    <?php include 'navs/nav.php';?>
 
 
 
@@ -33,32 +44,9 @@
               <th class="datosUsu">Administrar</th>
             </tr>
 
-            <tr>
-             <td class="listaUsu separadorls">Paco</td>
-             <td class="listaUsu">666666666</td>
-             <td class="listaUsu">paco@sanz.com</td>
-             <td class="listaUsu">Penépolis</td>
-             <td class="listaUsu">20-06-1985</td>
-             <td class="listaUsu"><i onclick="abrirModificarUsuarios(this)" class="fas fa-edit pointer opacity"></i> &nbsp<i class="fas fa-trash pointer opacity"></i></td>
-            </tr>
-
-            <tr>
-             <td class="listaUsu separadorls">Paco</td>
-             <td class="listaUsu">666666666</td>
-             <td class="listaUsu">paco@sanz.com</td>
-             <td class="listaUsu">Penépolis</td>
-             <td class="listaUsu">20-06-1985</td>
-             <td class="listaUsu"></td>
-            </tr>
-            <tr>
-             <td class="listaUsu separadorls">Paco</td>
-             <td class="listaUsu">666666666</td>
-             <td class="listaUsu">paco@sanz.com</td>
-             <td class="listaUsu">Penépolis</td>
-             <td class="listaUsu">20-06-1985</td>
-             <td class="listaUsu"></td>
-            </tr>
-
+            <?php
+            $lista=$j->listarUsuarios($con);
+              ?>
           </table>
         </div>
 
@@ -68,7 +56,7 @@
             <p class="tag">Crear Usuario</p>
             <p  onclick="cerrarRegistroUsuarios(this)" class="Xcerrar pointer">X</p>
 
-            <form class="" action="usuarios.php" method="post">
+            <form class="" action="" method="post">
 
               <div class="primerform formUsu">
                 <label for="usuario"></label>
@@ -139,6 +127,10 @@
 
     <?php include 'navs/footer.php'; ?>
 
+
+
     <script src="../public/assets/js/codigo.js"></script>
 </body>
 </html>
+
+<?php } ?>

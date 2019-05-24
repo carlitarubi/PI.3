@@ -1,6 +1,6 @@
 
 <ul class="sidebar">
-  <h1 class="navi"> <img class="redimensionar" src="logoblanco2.png" alt=""> </h1>
+  <h1 class="navi"> <a href="index.php"><img class="redimensionar" src="logoblanco2.png" alt=""></a> </h1>
 
   <div class="Perfil">
     <img class="imagenRedonda inline" src="perfil.png"> <div class="inline"><span class="centrars"><strong>Usuario</strong></span></div>
@@ -29,7 +29,7 @@
     <li>
         <a class="nave textoblanco" href="conciertos.php">Conciertos</a>
      </li>
-        <li>Eventos</li>
+        <a class="nave textoblanco" href="eventos.php"><li>Eventos</li></a>
     </ul>
   </li>
   <a class="nave" href="usuarios.php"><li><i class="fas fa-user-friends"></i> &nbsp Usuarios</li></a>
