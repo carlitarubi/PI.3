@@ -3,7 +3,8 @@
   <h1 class="navi"> <a href="dashboard.php"><img class="redimensionar" src="logoblanco2.png" alt=""></a> </h1>
 
   <div class="Perfil">
-    <img class="imagenRedonda inline" src="perfil.png"> <div class="inline"><span class="centrars"><strong>Usuario</strong>&nbsp<i class="fas fa-sign-out-alt textorojo"></i></span></div>
+    <img class="imagenRedonda inline" src="perfil.png"> <div class="inline"><span class="centrars"><a href="perfil.php" class="nave textoblanco"><strong>Usuario</strong></a><i class="fas fa-sign-out-alt textorojo"></i></span></div>
+    
   </div>
 
   <a class="nave" href="dashboard.php"><li><i class="fas fa-home"></i> &nbsp Inicio</li></a>
