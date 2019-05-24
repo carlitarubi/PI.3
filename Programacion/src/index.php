@@ -31,7 +31,7 @@ if (!empty($_POST)) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Tittle -->
-    <title>MockUp</title>
+    <title>Main Page</title>
 </head>
 <body>
 
@@ -41,8 +41,8 @@ if (!empty($_POST)) {
                     <!--X CERRAR-->
                     <span class="xcerrar" id="xcerrar" onclick="xcerrar(this)">X</span>
                   <!-- Tabs Titles -->
-                  <h2 class="active">Iniciar Sesión</h2>
-                  <h2 class="inactive underlineHover" onclick="signupbt(this)">Registrarse </h2>
+                  <h2 class="active">Sign In</h2>
+                  <h2 class="inactive underlineHover" onclick="signupbt(this)">Sign up </h2>
 
                   <!-- Icon -->
                   <div class="fadeIn first">
@@ -51,14 +51,14 @@ if (!empty($_POST)) {
 
                   <!-- Login Form -->
                   <form>
-                    <input type="text" id="login" class="fadeIn second" name="login" placeholder="Usuario">
-                    <input type="password" id="password" class="fadeIn third" name="password" placeholder="Contraseña">
-                    <input type="submit" class="fadeIn fourth botonlogin" value="Iniciar Sesión">
+                    <input type="text" id="login" class="fadeIn second" name="login" placeholder="Username">
+                    <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password">
+                    <input type="submit" class="fadeIn fourth botonlogin" value="Sign In">
                   </form>
 
                   <!-- Remind Password -->
                   <div id="formFooter">
-                    <a class="underlineHover forgotpass" href="#">¿Has olvidado la Contraseña?</a>
+                    <a class="underlineHover forgotpass" href="#">¿Forgot password?</a>
                   </div>
 
                 </div>
@@ -71,21 +71,22 @@ if (!empty($_POST)) {
                     <!--X CERRAR-->
                     <span class="xcerrarr" id="xcerrarr" onclick="xcerrarr(this)">X</span>
                   <!-- Tabs Titles -->
-                  <h2 class="inactiver underlineHover" onclick="signinbt(this)">Iniciar Sesión</h2>
-                  <h2 class="activer">Registrarse</h2>
+                  <h2 class="inactiver underlineHover" onclick="signinbt(this)">Sign In</h2>
+                  <h2 class="activer">Sign Up</h2>
 
                   <!-- Login Form -->
-                  <form action="" method="post">
-                    <input type="text" class="fadeIn second" name="nombre" placeholder="Nombre">
-                    <input type="text" class="fadeIn second" name="apellido" placeholder="Apellido">
-                    <input type="email" class="fadeIn second" name="email" placeholder="Email">
-                    <input type="password" id="password" class="fadeIn third" name="contraseña" placeholder="Contraseña">
-                    <input type="submit" class="fadeIn fourth botonregister" value="Registrarse">
+                  <form>
+                    <input type="text" id="login" class="fadeIn second" name="username" placeholder="Username">
+                    <input type="text" id="login" class="fadeIn second" name="nombre" placeholder="Name">
+                    <input type="text" id="login" class="fadeIn second" name="apellido" placeholder="Last name">
+                    <input type="email" id="login" class="fadeIn second" name="email" placeholder="Email">
+                    <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password">
+                    <input type="submit" class="fadeIn fourth botonregister" value="Sign up">
                   </form>
 
                   <!-- Remind Password -->
                   <div id="formFooterr">
-                    <a class="underlineHover forgotpass" href="#">¿Has olvidado la Contraseña?</a>
+                    <a class="underlineHover forgotpass" href="#">¿Forgot password?</a>
                   </div>
 
                 </div>
@@ -100,13 +101,13 @@ if (!empty($_POST)) {
                 <img id="logotrans" class="logonav logonegro" src="img/logofi.png" alt="">
 
             </li>
-            <li class="izqmg" id="inicio2"><a href="#inicio" id="inicio1">Inicio</a></li>
-            <li class="izqmg" id="caracteristicas2"> <a href="#conciertos" id="caracteristicas1">Conciertos</a></li>
-            <li class="izqmg" id="conciertos2"><a href="#contacto" id="conciertos1">Contacto</a> </li>
+            <li class="izqmg" id="inicio2"><a href="#inicio" id="inicio1">Home</a></li>
+            <li class="izqmg" id="caracteristicas2"> <a href="#conciertos" id="caracteristicas1">Concerts</a></li>
+            <li class="izqmg" id="conciertos2"><a href="#contacto" id="conciertos1">Contact us</a> </li>
             <li class="izqmg" id="contacto2"><a href="#faq" id="contacto1">FAQ</a> </li>
 
-            <li id="ins" onclick="login(this)"> <a id="ins1">Iniciar Sesión</a></li>
-            <li id="regis" onclick="register(this)"> <a id="ins2">Registrarse</a></li>
+            <li id="ins" onclick="login(this)"> <a id="ins1">Sign in</a></li>
+            <li id="regis" onclick="register(this)"> <a id="ins2">Sign up</a></li>
 
         </ul>
     </div>
@@ -133,9 +134,9 @@ if (!empty($_POST)) {
       
       <div class="conciertoa">
           
-        Disney, el concierto<br><br>
-        Diponible desde 12€
-          <input id="abajo" type="submit" value="Comprar" id="input-submit" onclick="login(this)" >
+        Disney, the concert<br><br>
+        Available from 12€
+          <input id="abajo" type="submit" value="Buy Now" id="input-submit" onclick="login(this)" >
         </div>
       </br>
       </div>
@@ -147,8 +148,8 @@ if (!empty($_POST)) {
 
       <div class="conciertoa">
                 Kidd Keo <br><br>
-        Diponible desde 25€
-          <input id="abajo" type="submit" value="Comprar" id="input-submit" onclick="login(this)" >
+        Available from 25€
+          <input id="abajo" type="submit" value="Buy Now" id="input-submit" onclick="login(this)" >
         </div>
       </br>
       </div>
@@ -156,15 +157,15 @@ if (!empty($_POST)) {
 
     <div id="contacto">
 <br>
-  <h1>CONTÁCTANOS</h1>
+  <h1>CONTACT US</h1>
   <form class="cf">
     <div class="half left cf">
-      <input type="text" id="input-name" placeholder="Nombre">
+      <input type="text" id="input-name" placeholder="Name">
       <input type="email" id="input-email" placeholder="Email">
-      <input type="text" id="input-subject" placeholder="Asunto">
+      <input type="text" id="input-subject" placeholder="Subject">
     </div>
     <div class="half right cf">
-      <textarea  cols="100" rows="10" name="message" type="text" id="input-message" placeholder="Mensaje"></textarea>
+      <textarea  cols="100" rows="10" name="message" type="text" id="input-message" placeholder="Message"></textarea>
     </div>
     <input type="submit" value="Enviar" id="input-submit" >
   </form>
@@ -173,44 +174,42 @@ if (!empty($_POST)) {
 
     <div id="faq">
 <br>
-      <h1 class="bluetype">PREGUNTAS FRECUENTES</h1>
+      <h1 class="bluetype">FREQUENT ASKED QUESTIONS</h1>
 
           <div class="faq-content">
 
               <div class="faq-question">
                 <input id="q1" type="checkbox" class="panel">
                 <div class="plus">+</div>
-                <label for="q1" class="panel-title">¿Donde puedo registrarme?</label>
-                <div class="panel-content">En la esquina superior derecha en el botón "Registrarse".</div>
+                <label for="q1" class="panel-title">¿Where can I sign up?</label>
+                <div class="panel-content">In the upper right corner on the "Sign up" button.</div>
               </div>
 
               <div class="faq-question">
                 <input id="q2" type="checkbox" class="panel">
                 <div class="plus">+</div>
-                <label for="q2" class="panel-title">¿Para qué sirve Evenfi?</label>
-                <div class="panel-content">Evenfi es una plataforma web de compra de entradas, donde podrás encontrar todo tipo de eventos y/o conciertos. Además podrás encontrar viajes organizados por los propios usuarios para poder acudir a tu evento. </div>
+                <label for="q2" class="panel-title">¿What is Evenfi?</label>
+                <div class="panel-content">
+                  Evenfi is a web platform for buying tickets, where you can find all kinds of events and / or concerts. You can also find trips organized by the users themselves to be able to attend your event. </div>
               </div>
 
               <div class="faq-question">
                 <input id="q3" type="checkbox" class="panel">
                 <div class="plus">+</div>
-                <label for="q3" class="panel-title">¿Como puedo encontrar el mejor transporte que más me convenga?</label>
-                <div class="panel-content">Al comprar tus entradas te aparecerá un apartado en el cual pone "Transporte" y ahí podrás elegir el qué más se adecúe a tus necesidades.</div>
+                <label for="q3" class="panel-title">¿How can I find the best transport?</label>
+                <div class="panel-content">
+                    When you buy your tickets you will see a section in which it says "Transport" and there you can choose the best transport for you.</div>
               </div>
 
               <div class="faq-question">
                 <input id="q4" type="checkbox" class="panel">
                 <div class="plus">+</div>
-                <label for="q4" class="panel-title">What happens if Pinocchio says, "my nose will grow now"?</label>
-                <div class="panel-content">Certain questions are better left</div>
+                <label for="q4" class="panel-title">What forms of payment are accepted?</label>
+                <div class="panel-content">Stripe accepts the main credit cards, PayPal and, in some countries, bank transfers.
+                  The available payment options will be specified in the purchase confirmation process</div>
               </div>
 
-              <div class="faq-question">
-                <input id="q5" type="checkbox" class="panel">
-                <div class="plus">+</div>
-                <label for="q5" class="panel-title">What happens if Pinocchio says, "my nose will grow now"? ""</label>
-                <div class="panel-content">Certain questions are better left</div>
-          </div>
+  
     </div>
 <br>
 

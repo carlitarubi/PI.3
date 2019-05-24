@@ -25,12 +25,13 @@ public function listarUsuarios($conexion){
 
   public function crearUsuario($conexion, $post){
 
-      if ((isset($post['usuario']))&&(isset($post['telf']))&&(isset($post['email']))&&(isset($post['localizacion']))) {
+      if ((isset($post['usuario']))&&(isset($post['telf']))&&(isset($post['email']))&&(isset($post['localizacion']))&&(isset($post['pass']))) {
                   $nombre = $post['usuario'];
                   $telf = $post['telf'];
                   $email = $post['email'];
+                  $pass = $post['pass'];
                   $localizacion = $post['localizacion'];
-                  if($insertar =  mysqli_query($conexion, "INSERT INTO usuario (nombre, telf, correo, localizacion) VALUES ('$nombre', $telf, '$email', '$localizacion')")){
+                  if($insertar =  mysqli_query($conexion, "INSERT INTO usuario (nombre, telf, correo, localizacion, pass) VALUES ('$nombre', $telf, '$email', '$localizacion', '$pass')")){
                     header("Location: usuarios.php");
   }
 }

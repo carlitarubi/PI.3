@@ -79,6 +79,12 @@ if (!empty($_POST)) {
                 <span>Localización:</span>
                 <input class="inputusu" type="text" name="localizacion" value="">
               </div>
+
+              <div class="formUsu">
+                <label for="pass"></label>
+                <span>Contraseña:</span>
+                <input class="inputusu" type="password" name="pass" value="">
+              </div>
               <input class="boton rosa pointer" type="submit" name="" value="Enviar">
             </form>
           </div>
