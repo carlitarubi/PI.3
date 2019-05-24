@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-05-2019 a las 00:00:33
+-- Tiempo de generación: 24-05-2019 a las 20:22:38
 -- Versión del servidor: 10.1.36-MariaDB
 -- Versión de PHP: 7.2.10
 
@@ -88,12 +88,18 @@ CREATE TABLE `plan` (
   `nombre` varchar(255) NOT NULL,
   `estilo` varchar(255) NOT NULL,
   `detalles` varchar(255) NOT NULL,
-  `n_compra` int(255) NOT NULL,
   `localización` varchar(255) NOT NULL,
   `precio` int(255) NOT NULL,
   `fecha_in` date NOT NULL,
   `fecha_fin` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `plan`
+--
+
+INSERT INTO `plan` (`id`, `tipo`, `nombre`, `estilo`, `detalles`, `localización`, `precio`, `fecha_in`, `fecha_fin`) VALUES
+(1, 'concierto', 'ArenalSound', 'Rock', 'un concierto para gente roja y toda la suciedad de españa', 'Barcelona', 15, '2019-06-12', '2019-06-13');
 
 -- --------------------------------------------------------
 
@@ -105,7 +111,7 @@ CREATE TABLE `usuario` (
   `id` int(255) NOT NULL,
   `nombre` varchar(255) NOT NULL,
   `apellido` varchar(255) NOT NULL,
-  `contraseña` varchar(255) NOT NULL,
+  `pass` varchar(255) NOT NULL,
   `correo` varchar(255) NOT NULL,
   `roll` varchar(255) DEFAULT 'Nigger',
   `puntos` int(255) DEFAULT '0',
@@ -121,11 +127,12 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `contraseña`, `correo`, `roll`, `puntos`, `tickets`, `telf`, `localizacion`, `fecha_creacion`, `tipo_ticket`, `estado`) VALUES
+INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `pass`, `correo`, `roll`, `puntos`, `tickets`, `telf`, `localizacion`, `fecha_creacion`, `tipo_ticket`, `estado`) VALUES
 (13, 'Richi', '', '', 'eltravas@gmail.com', NULL, NULL, NULL, 685938475, 'en tu cora bby', '2019-05-23 21:40:22', '', ''),
 (14, 'Nax el wason bb', '', '', 'tusmuelas@gmail.com', 'Nigger', 0, '0', 827346834, 'en tu cora bby', '2019-05-23 21:44:17', '', ''),
 (15, 'Manolo', '', '', 'kujasdn@gmail.com', 'Nigger', 0, '0', 92873493, 'Africa, uganda', '2019-05-23 22:35:40', '', ''),
-(16, 'Compare', '', '', 'difujnfd@gmail.com', 'Nigger', 0, '0', 92837289, 'losmuertos', '2019-05-23 22:37:05', '', '');
+(16, 'Compare', '', '', 'difujnfd@gmail.com', 'Nigger', 0, '0', 92837289, 'losmuertos', '2019-05-23 22:37:05', '', ''),
+(17, 'Admin', 'holadonjose', 'admin', 'admin@admin.com', 'Admin', 0, '3', 0, '', '2019-05-24 18:44:43', '', '');
 
 --
 -- Disparadores `usuario`
@@ -195,19 +202,19 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `compra`
 --
 ALTER TABLE `compra`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `linea`
 --
 ALTER TABLE `linea`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `plan`
@@ -219,7 +226,7 @@ ALTER TABLE `plan`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Restricciones para tablas volcadas
