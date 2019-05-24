@@ -1,6 +1,8 @@
 <?php
 require_once('conexion.php');
-comprobarSesion($_SESSION['emaillogin']);
+$j=new Conexion();
+$con = $j->conectar();
+$k=$j->comprobarSesion();
 ?>
 
 <!DOCTYPE html>

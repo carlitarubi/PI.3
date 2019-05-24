@@ -97,7 +97,7 @@ label[for="sidebar-btn"] {
 
 .content {
   min-height: 100%;
-  min-width: 100%;
+  width: 80%;
   background-color: #dcdde1;
   position: relative;
   top: 0;

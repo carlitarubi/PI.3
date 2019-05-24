@@ -36,5 +36,26 @@ public function listarUsuarios($conexion){
   }
 }
   }
+
+  public function listarTickets($conexion){
+    $email=$_SESSION['emaillogin'];
+    $consulta= mysqli_query($conexion, "SELECT tickets FROM usuario WHERE correo='$email'");
+
+    return $consulta;
+  }
+
+  public function listarTipoCuenta($conexion){
+    $email=$_SESSION['emaillogin'];
+    $consulta= mysqli_query($conexion, "SELECT roll FROM usuario WHERE correo='$email'");
+
+    return $consulta;
+  }
+
+  public function listarNombre($conexion){
+    $email=$_SESSION['emaillogin'];
+    $consulta= mysqli_query($conexion, "SELECT nombre FROM usuario WHERE correo='$email'");
+
+    return $consulta;
+  }
 }
  ?>

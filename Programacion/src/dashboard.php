@@ -1,8 +1,12 @@
 <?php
 require_once('conexion.php');
-$j=new Conexion();
+require_once('conexUsuario.php');
+$j=new Usuario();
 $con = $j->conectar();
 $k=$j->comprobarSesion();
+$l=$j->listarTickets($con);
+$tp=$j->listarTipoCuenta($con);
+$nm=$j->listarNombre($con);
 ?>
 
 
@@ -55,7 +59,10 @@ $k=$j->comprobarSesion();
             <div class="cajaglobal">
                     <div class="conciertosini textocajaini textoblanco">
                         Tickets <br>
-                        <div class="ccantidad textoblanco"><strong>17</strong></div>
+                        <div class="ccantidad textoblanco"><strong><?php 
+                        foreach ($l as $listaticket) {
+                            echo $listaticket['tickets'];
+                        } ?></strong></div>
                     </div>
                     <div class="conciertosini cajaicono blanco"><i class="fas fa-ticket-alt textoverde"></i></div>
             </div>
@@ -64,7 +71,10 @@ $k=$j->comprobarSesion();
             <div class="cajaglobal">
                     <div class="conciertosini textocajaini textoblanco">
                         Cuenta <br>
-                        <div class="ccantidad textoblanco"><strong>Fiestero</strong></div>
+                        <div class="ccantidad textoblanco"><strong><?php 
+                        foreach ($tp as $listatipocuenta) {
+                            echo $listatipocuenta['roll'];
+                        } ?></strong></div>
                     </div>
                     <div class="conciertosini cajaicono blanco"><i class="fas fa-hand-peace textomorado"></i></div>
             </div>
@@ -97,86 +107,6 @@ $k=$j->comprobarSesion();
 
         <div id="planes">
             <div class="cajasplanes">
-                <div class="cajainicio3">
-                    <div class="planescard planescardfoto"> <img class="imagencard" src="concert.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles"> 
-                        <div class="detallestxt"><strong>Concierto 1</strong></div>
-                        <div class="detallestxt">Aqui va una lista de detalles que describen el concierto en un breve texto.</div>
-                    </div>
-                    <div class="planescard planescardcomprar">
-                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
-                        <div class="botonescard botonmediano azul textoblanco">Más detalles</div>
-                    </div>
-                </div>
-                <div class="cajainicio3">
-                    <div class="planescard planescardfoto"> <img class="imagencard" src="concert.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles"> 
-                        <div class="detallestxt"><strong>Concierto 1</strong></div>
-                        <div class="detallestxt">Aqui va una lista de detalles que describen el concierto en un breve texto.</div>
-                    </div>
-                    <div class="planescard planescardcomprar">
-                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
-                        <div class="botonescard botonmediano azul textoblanco">Más detalles</div>
-                    </div>
-                </div>
-                <div class="cajainicio3">
-                    <div class="planescard planescardfoto"> <img class="imagencard" src="concert.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles"> 
-                        <div class="detallestxt"><strong>Concierto 1</strong></div>
-                        <div class="detallestxt">Aqui va una lista de detalles que describen el concierto en un breve texto.</div>
-                    </div>
-                    <div class="planescard planescardcomprar">
-                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
-                        <div class="botonescard botonmediano azul textoblanco">Más detalles</div>
-                    </div>
-                </div>
-                <div class="cajainicio3">
-                    <div class="planescard planescardfoto"> <img class="imagencard" src="concert.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles"> 
-                        <div class="detallestxt"><strong>Concierto 1</strong></div>
-                        <div class="detallestxt">Aqui va una lista de detalles que describen el concierto en un breve texto.</div>
-                    </div>
-                    <div class="planescard planescardcomprar">
-                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
-                        <div class="botonescard botonmediano azul textoblanco">Más detalles</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cajasplanes">
-            <div class="cajainicio3">
-                    <div class="planescard planescardfoto"> <img class="imagencard" src="concert.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles"> 
-                        <div class="detallestxt"><strong>Concierto 1</strong></div>
-                        <div class="detallestxt">Aqui va una lista de detalles que describen el concierto en un breve texto.</div>
-                    </div>
-                    <div class="planescard planescardcomprar">
-                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
-                        <div class="botonescard botonmediano azul textoblanco">Más detalles</div>
-                    </div>
-                </div>
-                <div class="cajainicio3">
-                    <div class="planescard planescardfoto"> <img class="imagencard" src="concert.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles"> 
-                        <div class="detallestxt"><strong>Concierto 1</strong></div>
-                        <div class="detallestxt">Aqui va una lista de detalles que describen el concierto en un breve texto.</div>
-                    </div>
-                    <div class="planescard planescardcomprar">
-                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
-                        <div class="botonescard botonmediano azul textoblanco">Más detalles</div>
-                    </div>
-                </div>
-                <div class="cajainicio3">
-                    <div class="planescard planescardfoto"> <img class="imagencard" src="concert.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles"> 
-                        <div class="detallestxt"><strong>Concierto 1</strong></div>
-                        <div class="detallestxt">Aqui va una lista de detalles que describen el concierto en un breve texto.</div>
-                    </div>
-                    <div class="planescard planescardcomprar">
-                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
-                        <div class="botonescard botonmediano azul textoblanco">Más detalles</div>
-                    </div>
-                </div>
                 <div class="cajainicio3">
                     <div class="planescard planescardfoto"> <img class="imagencard" src="concert.jpg" alt=""> </div>
                     <div class="planescard planescarddetalles"> 

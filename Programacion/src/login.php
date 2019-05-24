@@ -28,7 +28,6 @@ class Login extends Conexion{
                         if($rows==1){
     
                         $_SESSION['emaillogin'] = $email;
-                        echo "true";
                         header("Location: dashboard.php");
     
                     }else{

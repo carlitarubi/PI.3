@@ -3,7 +3,10 @@
   <h1 class="navi"> <a href="dashboard.php"><img class="redimensionar" src="logoblanco2.png" alt=""></a> </h1>
 
   <div class="Perfil">
-    <img class="imagenRedonda inline" src="perfil.png"> <div class="inline"><span class="centrars"><a href="perfil.php" class="nave textoblanco"><strong>Usuario</strong></a><i class="fas fa-sign-out-alt textorojo"></i></span></div>
+    <img class="imagenRedonda inline" src="perfil.png"> <div class="inline"><span class="centrars"><a href="perfil.php" class="nave textoblanco"><strong><?php 
+                        foreach ($nm as $listanombre) {
+                            echo $listanombre['nombre'];
+                        } ?></strong></a></span></div>
     
   </div>
 
@@ -22,6 +25,9 @@
         <a class="nave" href="quedadas.php"><li>Quedadas</li></a>
         <a class="nave" href="festivales.php"><li>Festivales</li></a>
     </ul>
+  </li>
+  <li>
+  <a href="logout.php" class="textorojo nave">Cerrar Sesión <i class="fas fa-sign-out-alt textorojo"></i></a>
   </li>
   <h5 class="navi">Admin</h5>
   <li onclick="abriradministrar(this)" class="mova">
