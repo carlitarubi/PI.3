@@ -19,7 +19,7 @@ class Registrar extends Conexion
                   var_dump($apellido);
                   $email = $post['email'];
                   var_dump($email);
-                  $pass = $post['contraseña'];
+                  $pass = $post['pass'];
                   var_dump($contraseña);
                   if($insertar =  mysqli_query($conexion, "INSERT INTO usuario (nombre, apellido, correo, pass) VALUES ('$nombre', '$apellido', '$email', '$pass')")){
                     header("Location: index.php");
