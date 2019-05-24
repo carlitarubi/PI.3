@@ -6,8 +6,6 @@ $con = $j->conectar();
 if (!empty($_POST)) {
   $registro = $j->crearUsuario($con, $_POST);
 }else{
-
-
 ?>
 <!DOCTYPE html>
 <html lang="es">

@@ -1,7 +1,4 @@
 <?php
-/**
- *
- */
 require_once('conexion.php');
 
 class Usuario extends Conexion
@@ -9,7 +6,6 @@ class Usuario extends Conexion
   function __construct()
   {
   }
-
 public function listarUsuarios($conexion){
     $resultado = mysqli_query($conexion, " SELECT nombre, correo, telf, localizacion, fecha_creacion FROM usuario ");
 
