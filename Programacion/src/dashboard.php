@@ -1,3 +1,11 @@
+<?php
+require_once('conexion.php');
+$j=new Conexion();
+$con = $j->conectar();
+$k=$j->comprobarSesion();
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

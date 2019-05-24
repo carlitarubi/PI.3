@@ -1,10 +1,14 @@
 <?php
 require 'conexion.php';
 require 'register.php';
+require 'login.php';
+$l=new Login();
+$p=new Conexion();
 $k=new Registrar();
 $con = $k->conectar();
 if (!empty($_POST)) {
   $registro = $k->registrarUsuario($con, $_POST);
+  $login = $l->loguearUsuario($con, $_POST);
 }else{
 
 
@@ -50,9 +54,9 @@ if (!empty($_POST)) {
                   </div>
 
                   <!-- Login Form -->
-                  <form>
-                    <input type="text" id="login" class="fadeIn second" name="login" placeholder="Username">
-                    <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password">
+                  <form action="" method="post">
+                    <input type="text" id="login" class="fadeIn second" name="emaillogin" placeholder="Email">
+                    <input type="password" id="password" class="fadeIn third" name="passlogin" placeholder="Password">
                     <input type="submit" class="fadeIn fourth botonlogin" value="Sign In">
                   </form>
 
@@ -75,12 +79,11 @@ if (!empty($_POST)) {
                   <h2 class="activer">Sign Up</h2>
 
                   <!-- Login Form -->
-                  <form>
-                    <input type="text" id="login" class="fadeIn second" name="username" placeholder="Username">
-                    <input type="text" id="login" class="fadeIn second" name="nombre" placeholder="Name">
-                    <input type="text" id="login" class="fadeIn second" name="apellido" placeholder="Last name">
-                    <input type="email" id="login" class="fadeIn second" name="email" placeholder="Email">
-                    <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password">
+                  <form action="" method="post">
+                    <input type="text" class="fadeIn second" name="nombre" placeholder="Name">
+                    <input type="text" class="fadeIn second" name="apellido" placeholder="Last name">
+                    <input type="email" class="fadeIn second" name="email" placeholder="Email">
+                    <input type="password" id="password" class="fadeIn third" name="pass" placeholder="Password">
                     <input type="submit" class="fadeIn fourth botonregister" value="Sign up">
                   </form>
 

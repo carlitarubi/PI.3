@@ -1,6 +1,7 @@
 <?php
 require 'conexion.php';
 require 'conexUsuario.php';
+comprobarSesion($_SESSION['emaillogin']);
 $j=new Usuario();
 $con = $j->conectar();
 if (!empty($_POST)) {

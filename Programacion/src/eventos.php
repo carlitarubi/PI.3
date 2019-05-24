@@ -1,3 +1,8 @@
+<?php
+require_once('conexion.php');
+comprobarSesion($_SESSION['emaillogin']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

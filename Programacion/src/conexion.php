@@ -14,5 +14,13 @@ class Conexion{
   return $conexion;
 
 }
+
+  public function comprobarSesion(){
+      if (isset($_SESSION['emaillogin'])) {
+        
+      }else {
+        header("Location: index.php");
+      }
+  }
 }
 ?>
