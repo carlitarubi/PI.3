@@ -91,19 +91,19 @@ $nm=$j->listarNombre($con);
                         <h3>Buscar por Concierto</h3><br>
                         <h4>Busca entre los mejores conciertos de España!</h4>
                     </div>
-                    <div class="caja botonlargo morado centrar">
-                        <span class="textoblanco">Vamos Ciudadanos!</span>
+                    <div class="caja botonlargo morado centrar" onclick="abrirconciertos(this)">
+                        <span class="textoblanco" onclick="abrirconciertos(this)">Vamos</span>
                     </div>
                 </div>
             </div>
             <div class="cajainicio2">
                 <div class="cajaglobal">
                     <div class="caja textocajalarga">
-                        <h3>Buscar por Concierto</h3><br>
-                        <h4>Busca entre los mejores conciertos de España!</h4>
+                        <h3>Buscar por Eventos</h3><br>
+                        <h4>Busca entre los mejores eventos de España!</h4>
                     </div>
-                    <div class="caja botonlargo morado centrar">
-                        <span class="textoblanco">Vamos Ciudadanos!</span>
+                    <div class="caja botonlargo morado centrar" onclick="abrireventos(this)">
+                        <span class="textoblanco" onclick="abrireventos(this)">Vamos</span>
                     </div>
                 </div>
         </div>

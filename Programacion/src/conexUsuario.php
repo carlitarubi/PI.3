@@ -58,7 +58,7 @@ public function listarUsuarios($conexion){
     return $consulta;
   }
 
-  function listarPlanes($conexion){
+  public function listarPlanes($conexion){
     $sql="SELECT p.* FROM plan p ".
        "ORDER BY p.id DESC LIMIT 8";
     
@@ -94,6 +94,111 @@ public function listarUsuarios($conexion){
       while($row=mysqli_fetch_assoc($consulta)){
         echo $row['c'];
       }
+    }
+  }
+
+  function conciertoRock($conexion){
+    $sql="SELECT p.* FROM plan p ".
+       "WHERE estilo = 'Rock' ORDER BY p.id DESC";
+    
+    $entradas = mysqli_query($conexion, $sql);
+    
+    foreach ($entradas as $plan) {
+      echo "<div class='cajainicio3'>";
+      echo "<div class='planescard planescardfoto'> <img class='imagencard' src='concert.jpg' alt=''> </div>";
+      echo "<div class='planescard planescarddetalles'> "; 
+      echo "<div class='detallestxt'><strong>".$plan['nombre']."</strong></div>";      
+      echo "<div class='detallestxt'>".substr($plan['detalles'], 0, 50)."..."."</div>";      
+      echo "</div>";   
+      echo "<div class='planescard planescardcomprar'>";   
+      echo "<div class='botonescard botonmediano morado textoblanco'>Comprar</div>";      
+      echo "<div class='botonescard botonmediano azul textoblanco'>Más detalles</div>";      
+      echo "</div>";   
+      echo "</div>"; 
+    }
+  }
+
+  function conciertoMetal($conexion){
+    $sql="SELECT p.* FROM plan p ".
+       "WHERE estilo = 'Metal' ORDER BY p.id DESC";
+    
+    $entradas = mysqli_query($conexion, $sql);
+    
+    foreach ($entradas as $plan) {
+      echo "<div class='cajainicio3'>";
+      echo "<div class='planescard planescardfoto'> <img class='imagencard' src='concert.jpg' alt=''> </div>";
+      echo "<div class='planescard planescarddetalles'> "; 
+      echo "<div class='detallestxt'><strong>".$plan['nombre']."</strong></div>";      
+      echo "<div class='detallestxt'>".substr($plan['detalles'], 0, 50)."..."."</div>";      
+      echo "</div>";   
+      echo "<div class='planescard planescardcomprar'>";   
+      echo "<div class='botonescard botonmediano morado textoblanco'>Comprar</div>";      
+      echo "<div class='botonescard botonmediano azul textoblanco'>Más detalles</div>";      
+      echo "</div>";   
+      echo "</div>"; 
+    }
+  }
+
+  function conciertoRap($conexion){
+    $sql="SELECT p.* FROM plan p ".
+       "WHERE estilo = 'Rap' ORDER BY p.id DESC";
+    
+    $entradas = mysqli_query($conexion, $sql);
+    
+    foreach ($entradas as $plan) {
+      echo "<div class='cajainicio3'>";
+      echo "<div class='planescard planescardfoto'> <img class='imagencard' src='concert.jpg' alt=''> </div>";
+      echo "<div class='planescard planescarddetalles'> "; 
+      echo "<div class='detallestxt'><strong>".$plan['nombre']."</strong></div>";      
+      echo "<div class='detallestxt'>".substr($plan['detalles'], 0, 50)."..."."</div>";      
+      echo "</div>";   
+      echo "<div class='planescard planescardcomprar'>";   
+      echo "<div class='botonescard botonmediano morado textoblanco'>Comprar</div>";      
+      echo "<div class='botonescard botonmediano azul textoblanco'>Más detalles</div>";      
+      echo "</div>";   
+      echo "</div>"; 
+    }
+  }
+
+  function conciertoQuedadas($conexion){
+    $sql="SELECT p.* FROM plan p ".
+       "WHERE estilo = 'Quedada' ORDER BY p.id DESC";
+    
+    $entradas = mysqli_query($conexion, $sql);
+    
+    foreach ($entradas as $plan) {
+      echo "<div class='cajainicio3'>";
+      echo "<div class='planescard planescardfoto'> <img class='imagencard' src='concert.jpg' alt=''> </div>";
+      echo "<div class='planescard planescarddetalles'> "; 
+      echo "<div class='detallestxt'><strong>".$plan['nombre']."</strong></div>";      
+      echo "<div class='detallestxt'>".substr($plan['detalles'], 0, 50)."..."."</div>";      
+      echo "</div>";   
+      echo "<div class='planescard planescardcomprar'>";   
+      echo "<div class='botonescard botonmediano morado textoblanco'>Comprar</div>";      
+      echo "<div class='botonescard botonmediano azul textoblanco'>Más detalles</div>";      
+      echo "</div>";   
+      echo "</div>"; 
+    }
+  }
+
+  function conciertoFestivales($conexion){
+    $sql="SELECT p.* FROM plan p ".
+       "WHERE estilo = 'Festival' ORDER BY p.id DESC";
+    
+    $entradas = mysqli_query($conexion, $sql);
+    
+    foreach ($entradas as $plan) {
+      echo "<div class='cajainicio3'>";
+      echo "<div class='planescard planescardfoto'> <img class='imagencard' src='concert.jpg' alt=''> </div>";
+      echo "<div class='planescard planescarddetalles'> "; 
+      echo "<div class='detallestxt'><strong>".$plan['nombre']."</strong></div>";      
+      echo "<div class='detallestxt'>".substr($plan['detalles'], 0, 50)."..."."</div>";      
+      echo "</div>";   
+      echo "<div class='planescard planescardcomprar'>";   
+      echo "<div class='botonescard botonmediano morado textoblanco'>Comprar</div>";      
+      echo "<div class='botonescard botonmediano azul textoblanco'>Más detalles</div>";      
+      echo "</div>";   
+      echo "</div>"; 
     }
   }
 }
