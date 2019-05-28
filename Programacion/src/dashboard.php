@@ -7,6 +7,7 @@ $k=$j->comprobarSesion();
 $l=$j->listarTickets($con);
 $tp=$j->listarTipoCuenta($con);
 $nm=$j->listarNombre($con);
+
 ?>
 
 
@@ -41,7 +42,8 @@ $nm=$j->listarNombre($con);
                 <div class="cajaglobal">
                     <div class="conciertosini textocajaini">
                         Conciertos <br>
-                        <div class="ccantidad"><strong>256</strong></div>
+                        <div class="ccantidad"><strong><?php 
+                        $nc=$j->contarConciertos($con); ?></strong></div>
                     </div>
                     <div class="conciertosini cajaicono"><i class="fas fa-music"></i></div>
                 </div>
@@ -50,7 +52,8 @@ $nm=$j->listarNombre($con);
             <div class="cajaglobal">
                     <div class="conciertosini textocajaini">
                         Eventos <br>
-                        <div class="ccantidad"><strong>136</strong></div>
+                        <div class="ccantidad"><strong><?php 
+                        $ne=$j->contarEventos($con); ?></strong></div>
                     </div>
                     <div class="conciertosini cajaicono"><i class="fas fa-thumbtack"></i></div>
             </div>
@@ -107,17 +110,12 @@ $nm=$j->listarNombre($con);
 
         <div id="planes">
             <div class="cajasplanes">
-                <div class="cajainicio3">
-                    <div class="planescard planescardfoto"> <img class="imagencard" src="concert.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles"> 
-                        <div class="detallestxt"><strong>Concierto 1</strong></div>
-                        <div class="detallestxt">Aqui va una lista de detalles que describen el concierto en un breve texto.</div>
-                    </div>
-                    <div class="planescard planescardcomprar">
-                        <div class="botonescard botonmediano morado textoblanco">Comprar</div>
-                        <div class="botonescard botonmediano azul textoblanco">Más detalles</div>
-                    </div>
-                </div>
+
+                        <?php
+                            $planes=$j->listarPlanes($con);
+                        ?>
+
+
             </div>
         </div>
 

@@ -57,5 +57,44 @@ public function listarUsuarios($conexion){
 
     return $consulta;
   }
+
+  function listarPlanes($conexion){
+    $sql="SELECT p.* FROM plan p ".
+       "ORDER BY p.id DESC LIMIT 8";
+    
+    $entradas = mysqli_query($conexion, $sql);
+    
+    foreach ($entradas as $plan) {
+      echo "<div class='cajainicio3'>";
+      echo "<div class='planescard planescardfoto'> <img class='imagencard' src='concert.jpg' alt=''> </div>";
+      echo "<div class='planescard planescarddetalles'> "; 
+      echo "<div class='detallestxt'><strong>".$plan['nombre']."</strong></div>";      
+      echo "<div class='detallestxt'>".substr($plan['detalles'], 0, 50)."..."."</div>";      
+      echo "</div>";   
+      echo "<div class='planescard planescardcomprar'>";   
+      echo "<div class='botonescard botonmediano morado textoblanco'>Comprar</div>";      
+      echo "<div class='botonescard botonmediano azul textoblanco'>Más detalles</div>";      
+      echo "</div>";   
+      echo "</div>"; 
+    }
+  }
+
+  public function contarConciertos($conexion){
+    $consulta= mysqli_query($conexion, "SELECT COUNT(*) as c FROM plan WHERE tipo = 'Concierto'");
+    if($consulta){
+      while($row=mysqli_fetch_assoc($consulta)){
+        echo $row['c'];
+      }
+    }
+  }
+
+  public function contarEventos($conexion){
+    $consulta= mysqli_query($conexion, "SELECT COUNT(*) as c FROM plan WHERE tipo = 'Evento'");
+    if($consulta){
+      while($row=mysqli_fetch_assoc($consulta)){
+        echo $row['c'];
+      }
+    }
+  }
 }
  ?>

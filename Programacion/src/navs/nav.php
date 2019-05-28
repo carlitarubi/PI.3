@@ -29,6 +29,11 @@
   <li>
   <a href="logout.php" class="textorojo nave">Cerrar Sesión <i class="fas fa-sign-out-alt textorojo"></i></a>
   </li>
+
+  <?php 
+  foreach ($tp as $listatipocuenta) {
+    if($listatipocuenta['roll'] == 'Admin'){
+  ?>
   <h5 class="navi">Admin</h5>
   <li onclick="abriradministrar(this)" class="mova">
    <i class="fas fa-cog"></i> &nbsp Administrar <span id="flechita2"><i class="fas fa-angle-right"></i></span>
@@ -40,6 +45,12 @@
     </ul>
   </li>
   <a class="nave" href="usuarios.php"><li><i class="fas fa-user-friends"></i> &nbsp Usuarios</li></a>
-</ul>
 
-<input type="checkbox" id="sidebar-btn" class="sidebar-btn" checked/>
+<?php
+    }
+  }
+  ?>
+
+  </ul>
+  
+  <input type="checkbox" id="sidebar-btn" class="sidebar-btn" checked/>

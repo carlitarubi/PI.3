@@ -1,9 +1,10 @@
 <?php
 require 'conexion.php';
 require 'conexUsuario.php';
-comprobarSesion($_SESSION['emaillogin']);
 $j=new Usuario();
 $con = $j->conectar();
+$nm=$j->listarNombre($con);
+$tp=$j->listarTipoCuenta($con);
 if (!empty($_POST)) {
   $registro = $j->crearUsuario($con, $_POST);
 }else{

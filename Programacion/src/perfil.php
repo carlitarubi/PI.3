@@ -1,8 +1,13 @@
 <?php
 require 'conexion.php';
 require 'conexPerfil.php';
+require_once('conexUsuario.php');
 $j=new Usuario();
+$p=new Usuario2();
 $con = $j->conectar();
+$k=$j->comprobarSesion();
+$nm=$j->listarNombre($con);
+$tp=$j->listarTipoCuenta($con);
 if (!empty($_POST)) {
   $registro = $j->crearUsuario($con, $_POST);
 }else{
@@ -42,7 +47,7 @@ if (!empty($_POST)) {
             </tr>
 
             <?php
-            $lista=$j->listarUsuario($con);
+            $lista=$p->listarUsuario($con);
               ?>
           </table>
         </div>

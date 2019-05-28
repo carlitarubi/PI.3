@@ -1,8 +1,11 @@
 <?php 
 require_once('conexion.php');
-$j=new Conexion();
+require_once('conexUsuario.php');
+$j=new Usuario();
 $con = $j->conectar();
 $k=$j->comprobarSesion();
+$nm=$j->listarNombre($con);
+$tp=$j->listarTipoCuenta($con);
 ?>
 
 <!DOCTYPE html>

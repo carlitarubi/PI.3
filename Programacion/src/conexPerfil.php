@@ -1,7 +1,7 @@
 <?php
 require_once('conexion.php');
 
-class Usuario extends Conexion
+class Usuario2 extends Conexion
 {
   function __construct()
   {
