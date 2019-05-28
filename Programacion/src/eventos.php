@@ -6,6 +6,10 @@ $con = $j->conectar();
 $k=$j->comprobarSesion();
 $nm=$j->listarNombre($con);
 $tp=$j->listarTipoCuenta($con);
+
+if (!empty($_POST)) {
+    $registro = $j->crearEventoAdm($con, $_POST);
+  }else{
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +20,7 @@ $tp=$j->listarTipoCuenta($con);
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../public/assets/css/estilos.css">
+    <link rel="stylesheet" href="../public/assets/css/usuariosADM.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>Eventos</title>
 </head>
@@ -29,117 +34,85 @@ $tp=$j->listarTipoCuenta($con);
     <h2>Eventos</h2>
     <br>
 
-    <div class="añadirconciertos pointer"><strong>+ Añadir Eventos</strong></div>
+    <div class="botoncrear rosa pointer" onclick="abrirRegistroUsuarios(this)"><strong>+ Añadir Eventos</strong></div>
 
 
 
 
-        <div id="planes">
-                <div class="cajasplanes">
-                    <div class="cajainicio3">
-                    <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles">
-                        <div class="detallestxt"><strong>Evento 1</strong></div>
-                        <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
-                        <div class="detallestxt">XX COMENTARIOS</div>
-                    </div>
-                    <div class="planescard planescardcomprar">
-                        <div class="botonescard botonmediano morado textoblanco">borrar</div>
-                        <div class="botonescard botonmediano verde textoblanco">editar</div>
-                    </div>
-                </div>
-                <div class="cajainicio3">
-                <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles">
-                        <div class="detallestxt"><strong>Evento 2</strong></div>
-                        <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
-                        <div class="detallestxt">XX COMENTARIOS</div>
-                    </div>
-                    <div class="planescard planescardcomprar">
-                        <div class="botonescard botonmediano morado textoblanco">borrar</div>
-                        <div class="botonescard botonmediano verde textoblanco">editar</div>
-                    </div>
+             <div id="planes">
+                 <div class="cajasplanes">
 
-                </div>
-                <div class="cajainicio3">
-                <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles">
-                        <div class="detallestxt"><strong>Evento 3</strong></div>
-                        <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
-                        <div class="detallestxt">XX COMENTARIOS</div>
-                    </div>
-                    <div class="planescard planescardcomprar">
-                        <div class="botonescard botonmediano morado textoblanco">borrar</div>
-                        <div class="botonescard botonmediano verde textoblanco">editar</div>
-                    </div>
+                        <?php
+                            $planes=$j->eventosAdm($con);
+                        ?>
 
-                </div>
-                <div class="cajainicio3">
-                <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles">
-                        <div class="detallestxt"><strong>Evento 4</strong></div>
-                        <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
-                        <div class="detallestxt">XX COMENTARIOS</div>
-                    </div>
-                    <div class="planescard planescardcomprar">
-                        <div class="botonescard botonmediano morado textoblanco">borrar</div>
-                        <div class="botonescard botonmediano verde textoblanco">editar</div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="cajasplanes">
-                <div class="cajainicio3">
-                <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles">
-                        <div class="detallestxt"><strong>Evento 5</strong></div>
-                        <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
-                        <div class="detallestxt">XX COMENTARIOS</div>
-                    </div>
-                    <div class="planescard planescardcomprar">
-                        <div class="botonescard botonmediano morado textoblanco">borrar</div>
-                        <div class="botonescard botonmediano verde textoblanco">editar</div>
-                    </div>
-                </div>
-                <div class="cajainicio3">
-                <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles">
-                        <div class="detallestxt"><strong>Evento 6</strong></div>
-                        <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
-                        <div class="detallestxt">XX COMENTARIOS</div>
-                    </div>
-                    <div class="planescard planescardcomprar">
-                        <div class="botonescard botonmediano morado textoblanco">borrar</div>
-                        <div class="botonescard botonmediano verde textoblanco">editar</div>
-                    </div>
-                </div>
-                <div class="cajainicio3">
-                <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles">
-                        <div class="detallestxt"><strong>Evento 7</strong></div>
-                        <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
-                        <div class="detallestxt">XX COMENTARIOS</div>
-                    </div>
-                    <div class="planescard planescardcomprar">
-                        <div class="botonescard botonmediano morado textoblanco">borrar</div>
-                        <div class="botonescard botonmediano verde textoblanco">editar</div>
-                    </div>
-                </div>
-                <div class="cajainicio3">
-                <div class="planescard planescardfoto"> <img class="imagencard" src="concierto.jpg" alt=""> </div>
-                    <div class="planescard planescarddetalles">
-                        <div class="detallestxt"><strong>Evento 8</strong></div>
-                        <div class="detallestxt">XX ENTRADAS VENDIDAS</div>
-                        <div class="detallestxt">XX COMENTARIOS</div>
-                    </div>
-                    <div class="planescard planescardcomprar">
-                        <div class="botonescard botonmediano morado textoblanco">borrar</div>
-                        <div class="botonescard botonmediano verde textoblanco">editar</div>
-                    </div>
-                </div>
-            </div>
+                 </div>
+             </div>
+
+             <div id="fondoRegistroUsuarios" class="fondocrearUsu displayNone">
+          <div id="XregistroUsuarios" class="crearUsu displayNone">
+            <p class="tag">Añadir Concierto</p>
+            <p  onclick="cerrarRegistroUsuarios(this)" class="Xcerrar pointer">X</p>
+
+            <form class="" action="" method="post">
+
+              <div class="primerform formUsu">
+                <span>Tipo:</span>
+                <select class="inputusu" name="concierto">
+                <option value="evento">Evento</option>
+                </select>
+              </div>
+
+              <div class="formUsu">
+                <label for="nombre"></label>
+                <span>Nombre:</span>
+                <input class="inputusu" type="text" name="nombre" value="">
+              </div>
+
+              <div class="formUsu">
+                <span>Estilo:</span>
+                <select class="inputusu" name="estilo">
+                <option value="Quedada">Quedada</option>
+                <option value="Evento">Evento</option>
+                </select>
+              </div>
+
+              <div class="formUsu">
+                <label for="detalles"></label>
+                <span>Detalles:</span>
+                <input class="inputusu" type="text" name="detalles" value="">
+              </div>
+
+              <div class="formUsu">
+                <label for="localizacion"></label>
+                <span>Localización:</span>
+                <input class="inputusu" type="text" name="localizacion" value="">
+              </div>
+
+              <div class="formUsu">
+                <label for="precio"></label>
+                <span>Precio:</span>
+                <input class="inputusu" type="text" name="precio" value="">
+              </div>
+
+              <div class="formUsu">
+                <label for="fechai"></label>
+                <span>Fecha Inicial:</span>
+                <input class="inputusu" type="text" name="fechai" value="" placeholder="AAAA-MM-DD">
+              </div>
+
+              <div class="formUsu">
+                <label for="fechaf"></label>
+                <span>Fecha Finalización:</span>
+                <input class="inputusu" type="text" name="fechaf" value="" placeholder="AAAA-MM-DD">
+              </div>
+              <input class="boton rosa pointer" type="submit" name="" value="Enviar">
+            </form>
+          </div>
         </div>
 
+ 
 
 
 
@@ -166,3 +139,5 @@ $tp=$j->listarTipoCuenta($con);
     <script src="../public/assets/js/codigo.js"></script>
 </body>
 </html>
+
+<?php } ?>

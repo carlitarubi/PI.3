@@ -201,5 +201,83 @@ public function listarUsuarios($conexion){
       echo "</div>"; 
     }
   }
+
+  function conciertosAdm($conexion){
+    $sql="SELECT p.* FROM plan p ".
+       "WHERE tipo = 'Concierto' ORDER BY p.id DESC";
+    
+    $entradas = mysqli_query($conexion, $sql);
+    
+    foreach ($entradas as $plan) {
+      echo "<div class='cajainicio3'>";
+      echo "<div class='planescard planescardfoto'> <img class='imagencard' src='concert.jpg' alt=''> </div>";
+      echo "<div class='planescard planescarddetalles'> "; 
+      echo "<div class='detallestxt'><strong>".$plan['nombre']."</strong></div>";      
+      echo "<div class='detallestxt'>".substr($plan['detalles'], 0, 50)."..."."</div>";      
+      echo "</div>";   
+      echo "<div class='planescard planescardcomprar'>";   
+      echo "<div class='botonescard botonmediano morado textoblanco'>Borrar</div>";      
+      echo "<div class='botonescard botonmediano azul textoblanco'>Editar</div>";      
+      echo "</div>";   
+      echo "</div>"; 
+    }
+  }
+
+  function eventosAdm($conexion){
+    $sql="SELECT p.* FROM plan p ".
+       "WHERE tipo = 'Evento' ORDER BY p.id DESC";
+    
+    $entradas = mysqli_query($conexion, $sql);
+    
+    foreach ($entradas as $plan) {
+      echo "<div class='cajainicio3'>";
+      echo "<div class='planescard planescardfoto'> <img class='imagencard' src='concert.jpg' alt=''> </div>";
+      echo "<div class='planescard planescarddetalles'> "; 
+      echo "<div class='detallestxt'><strong>".$plan['nombre']."</strong></div>";      
+      echo "<div class='detallestxt'>".substr($plan['detalles'], 0, 50)."..."."</div>";      
+      echo "</div>";   
+      echo "<div class='planescard planescardcomprar'>";   
+      echo "<div class='botonescard botonmediano morado textoblanco'>Borrar</div>";      
+      echo "<div class='botonescard botonmediano azul textoblanco'>Editar</div>";      
+      echo "</div>";   
+      echo "</div>"; 
+    }
+  }
+
+  public function crearConciertoAdm($conexion, $post){
+
+    if ((isset($post['concierto']))&&(isset($post['nombre']))&&(isset($post['estilo']))&&(isset($post['detalles']))&&(isset($post['localizacion']))&&(isset($post['precio']))&&(isset($post['fechai']))&&(isset($post['fechaf']))) {
+                $tipo = $post['concierto'];
+                $nombre = $post['nombre'];
+                $estilo = $post['estilo'];
+                $detalles = $post['detalles'];
+                $localizacion = $post['localizacion'];
+                $precio = $post['precio'];
+                $fechai = $post['fechai'];
+                $fechaf = $post['fechaf'];
+                if($insertar =  mysqli_query($conexion, "INSERT INTO plan (tipo, nombre, estilo, detalles, localizacion, precio, fecha_in, fecha_fin) VALUES ('$tipo', '$nombre', '$estilo', '$detalles', '$localizacion', $precio, '$fechai', '$fechaf')")){
+                  header("Location: conciertos.php");
+                }
+    }
+  }
+
+  public function crearEventoAdm($conexion, $post){
+
+    if ((isset($post['concierto']))&&(isset($post['nombre']))&&(isset($post['estilo']))&&(isset($post['detalles']))&&(isset($post['localizacion']))&&(isset($post['precio']))&&(isset($post['fechai']))&&(isset($post['fechaf']))) {
+                $tipo = $post['concierto'];
+                $nombre = $post['nombre'];
+                $estilo = $post['estilo'];
+                $detalles = $post['detalles'];
+                $localizacion = $post['localizacion'];
+                $precio = $post['precio'];
+                $fechai = $post['fechai'];
+                $fechaf = $post['fechaf'];
+
+                var_dump($fechaf);
+                if($insertar =  mysqli_query($conexion, "INSERT INTO plan (tipo, nombre, estilo, detalles, localizacion, precio, fecha_in, fecha_fin) VALUES ('$tipo', '$nombre', '$estilo', '$detalles', '$localizacion', $precio, '$fechai', '$fechaf')")){
+                  header("Location: eventos.php");
+                }
+    }
+  }
 }
  ?>
