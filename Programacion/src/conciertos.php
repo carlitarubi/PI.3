@@ -1,6 +1,7 @@
 <?php 
 require_once('conexion.php');
 require_once('conexUsuario.php');
+require_once('borrarconcierto.php');
 $j=new Usuario();
 $con = $j->conectar();
 $k=$j->comprobarSesion();
@@ -9,6 +10,7 @@ $tp=$j->listarTipoCuenta($con);
 
 if (!empty($_POST)) {
     $registro = $j->crearConciertoAdm($con, $_POST);
+
   }else{
 ?>
 

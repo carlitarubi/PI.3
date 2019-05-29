@@ -74,7 +74,7 @@ if (!empty($_POST)) {
                 <span>Estilo:</span>
                 <select class="inputusu" name="estilo">
                 <option value="Quedada">Quedada</option>
-                <option value="Evento">Evento</option>
+                <option value="Festival">Festival</option>
                 </select>
               </div>
 
