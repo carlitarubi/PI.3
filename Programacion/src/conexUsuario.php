@@ -72,7 +72,7 @@ public function listarUsuarios($conexion){
       echo "<div class='detallestxt'>".substr($plan['detalles'], 0, 50)."..."."</div>";      
       echo "</div>";   
       echo "<div class='planescard planescardcomprar'>";   
-      echo "<div class='botonescard botonmediano morado textoblanco'>Comprar</div>";      
+      echo "<div class='botonescard botonmediano morado textoblanco'><a class='nave textoblanco' href='comprar.php?id=".$plan['id']."'>Comprar</a></div>";      
       echo "<div class='botonescard botonmediano azul textoblanco'>Más detalles</div>";      
       echo "</div>";   
       echo "</div>"; 
@@ -111,7 +111,7 @@ public function listarUsuarios($conexion){
       echo "<div class='detallestxt'>".substr($plan['detalles'], 0, 50)."..."."</div>";      
       echo "</div>";   
       echo "<div class='planescard planescardcomprar'>";   
-      echo "<div class='botonescard botonmediano morado textoblanco'>Comprar</div>";      
+      echo "<div class='botonescard botonmediano morado textoblanco'><a class='nave textoblanco' href='comprar.php?id=".$plan['id']."'>Comprar</a></div>";      
       echo "<div class='botonescard botonmediano azul textoblanco'>Más detalles</div>";      
       echo "</div>";   
       echo "</div>"; 
@@ -132,7 +132,7 @@ public function listarUsuarios($conexion){
       echo "<div class='detallestxt'>".substr($plan['detalles'], 0, 50)."..."."</div>";      
       echo "</div>";   
       echo "<div class='planescard planescardcomprar'>";   
-      echo "<div class='botonescard botonmediano morado textoblanco'>Comprar</div>";      
+      echo "<div class='botonescard botonmediano morado textoblanco'><a class='nave textoblanco' href='comprar.php?id=".$plan['id']."'>Comprar</a></div>";      
       echo "<div class='botonescard botonmediano azul textoblanco'>Más detalles</div>";      
       echo "</div>";   
       echo "</div>"; 
@@ -153,7 +153,7 @@ public function listarUsuarios($conexion){
       echo "<div class='detallestxt'>".substr($plan['detalles'], 0, 50)."..."."</div>";      
       echo "</div>";   
       echo "<div class='planescard planescardcomprar'>";   
-      echo "<div class='botonescard botonmediano morado textoblanco'>Comprar</div>";      
+      echo "<div class='botonescard botonmediano morado textoblanco'><a class='nave textoblanco' href='comprar.php?id=".$plan['id']."'>Comprar</a></div>";      
       echo "<div class='botonescard botonmediano azul textoblanco'>Más detalles</div>";      
       echo "</div>";   
       echo "</div>"; 
@@ -174,7 +174,7 @@ public function listarUsuarios($conexion){
       echo "<div class='detallestxt'>".substr($plan['detalles'], 0, 50)."..."."</div>";      
       echo "</div>";   
       echo "<div class='planescard planescardcomprar'>";   
-      echo "<div class='botonescard botonmediano morado textoblanco'>Comprar</div>";      
+      echo "<div class='botonescard botonmediano morado textoblanco'><a class='nave textoblanco' href='comprar.php?id=".$plan['id']."'>Comprar</a></div>";      
       echo "<div class='botonescard botonmediano azul textoblanco'>Más detalles</div>";      
       echo "</div>";   
       echo "</div>"; 
@@ -195,7 +195,7 @@ public function listarUsuarios($conexion){
       echo "<div class='detallestxt'>".substr($plan['detalles'], 0, 50)."..."."</div>";      
       echo "</div>";   
       echo "<div class='planescard planescardcomprar'>";   
-      echo "<div class='botonescard botonmediano morado textoblanco'>Comprar</div>";      
+      echo "<div class='botonescard botonmediano morado textoblanco'><a class='nave textoblanco' href='comprar.php?id=".$plan['id']."'>Comprar</a></div>";      
       echo "<div class='botonescard botonmediano azul textoblanco'>Más detalles</div>";      
       echo "</div>";   
       echo "</div>"; 
@@ -278,6 +278,33 @@ public function listarUsuarios($conexion){
                   header("Location: eventos.php");
                 }
     }
+  }
+
+  public function comprarEntrada($conexion){
+
+    $resultado = $conexion->query("SELECT * FROM plan");
+
+    foreach ($resultado as $plan) {
+        $ids[] = $plan['id'];
+        $precio[] = $plan['precio'];
+        $nombre[] = $plan['nombre'];
+    }
+
+    $plan['id'] = $_GET['id'];
+
+    $sumeta = $plan['id'];
+    $sumeta--;
+    $plan['id'] = $sumeta;
+        
+        if(isset($_GET['id'])){
+                echo "<td    style= 'width: 35em; text-align: center'> <img id='fotocierto' class='conciertillo' src='concierto.jpg' style='border-radius: 10px'  >   <d id='textillo'>".$nombre[$plan['id']]."</d>";
+                echo "</br></td>";
+                echo "<td style='width: 10em'>".$precio[$plan['id']]."<span>€</span></td>";
+                echo "<td style='width: 10em'>1</td>";
+                echo "<td style='width: 10em'>".$precio[$plan['id']]."€</td>";
+                
+        }
+
   }
 }
  ?>

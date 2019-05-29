@@ -1,0 +1,53 @@
+.caja{
+	width: 130em;
+	height: 70em;
+	background-color: #dcdde1;
+	position: relative;
+}
+
+.cajita{
+	width: 75em;
+	height: 55em;
+	background-color: white ;
+	margin-left: 4em;
+	position: relative;
+	display: flex;
+	margin-top: 2em;
+}
+
+.cajilla{
+	width:70em;
+	height: 50em; 
+	background-color: white;
+	margin-top: 2em;
+	position: relative;
+	margin-left: 2em;
+}
+
+#tabla2{
+	height: 10em;
+	width: 50em;
+	margin-top: 3em;		
+}
+
+.conciertillo{
+	height: 8em;
+	width: 12em;
+	margin-left: 2em;
+	margin-top: 1em;
+}
+
+#fotocierto{
+	margin-top: 1.5em;
+	float:left;
+	padding-bottom: ;
+ 
+}
+
+#textillo{
+	float:left;
+	float: top;
+	margin-top:5em;
+	margin-left: 2em;
+	padding-bottom: 5em;
+}
